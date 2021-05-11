@@ -1,0 +1,1468 @@
+@import "../vars"
+
+.slick-next, .slick-prev
+	&:hover
+		opacity: 0.6
+.slick-next
+	background: url(../../img/next.svg) center center no-repeat
+.slick-prev
+	background: url(../../img/prev.svg) center center no-repeat
+
+.main
+	position: relative
+	.wrapper
+		padding: 267px 30px 222px
+		position: relative
+	&-info
+		max-width: 765px
+		position: relative
+		z-index: 10
+		p
+			max-width: 530px
+			font-size: 1.3rem
+			line-height: 1.6
+			color: #7C808A
+			padding-bottom: 60px
+	&-title
+		display: block
+		font: 900 3.75rem/1.2 $MriyaGrotesk
+		letter-spacing: -0.025em
+		margin: 0 0 36px
+	&-img
+		position: absolute
+		bottom: 0
+		left: 580px
+		img,svg
+			display: block
+			max-width: 843px
+
+.info
+	.wrapper
+		width: 100%
+	img,svg
+		display: block
+	p
+		font-family: $MriyaGrotesk
+		font-size: 1.5rem
+		letter-spacing: -0.025em
+		padding-bottom: 36px
+		&:last-child
+			padding-bottom: 0
+	ul
+		li
+			font: 900 2rem/1.2 $MriyaGrotesk
+			color: #515151
+			letter-spacing: -0.025em
+			margin-bottom: 40px
+			span
+				border-bottom: 4.16847px solid #79D8FF
+			&:last-child
+				margin-bottom: 0
+	&-top
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		justify-content: space-between
+		padding-bottom: 40px
+		.section-title
+			margin: 0
+		img,svg
+			max-width: 238px
+			margin-right: 90px
+	&-row
+		display: flex
+		flex-flow: row wrap
+		margin: 0 -32px
+		position: relative
+		z-index: 20
+	&-col
+		width: 50%
+		padding: 0 32px
+		&__1
+			width: 45%
+		&__2
+			width: 55%
+	&-button,&-buttons
+		padding-top: 64px
+	&-buttons
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+	&-link
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		font: bold 0.9rem/22px $MriyaGrotesk
+		letter-spacing: -0.025em
+		color: #7C808A
+		margin-left: 40px
+		.hb-ico
+			margin-right: 5px
+	&-bg
+		position: absolute
+		img,svg
+			display: block
+		&__1
+			top: 52px
+			left: 0
+			img,svg
+				max-width: 333px
+		&__2
+			top: 61px
+			right: 0
+			img,svg
+				max-width: 458px
+	&-block
+		padding: 40px 0 50px
+		&.info-1
+			padding: 50px 0 213px
+			background: #EFF8FA
+			p
+				color: #515151
+				max-width: 470px
+		&.info-2
+			padding: 40px 0 182px
+			.info
+				&-top
+					align-items: flex-end
+					padding-bottom: 35px
+					.section-title
+						margin-bottom: 18px
+					img,svg
+						max-width: 230px
+		&.info-3
+			padding: 161px 0 177px
+			background: #FEF6F6
+			.wrapper
+				max-width: 1300px
+			p
+				max-width: 570px
+		&.info-4
+			min-height: 850px
+			padding: 125px 0 95px
+			p
+				max-width: 525px
+			.info-button
+				padding-top: 28px
+		&.info-5
+			min-height: 800px
+			padding: 190px 0 177px
+			background: #F4F3FA
+			.info
+				&-row
+					flex-flow: row nowrap
+				&-col
+					&__1
+						width: 41%
+						position: relative
+						img,svg
+							position: absolute
+							top: -59px
+							left: -50px
+							max-width: 492px
+							width: 100%
+					&__2
+						width: 59%
+		&.info-6
+			padding: 183px 0 151px
+			position: relative
+			.wrapper
+				max-width: 1031px
+			.section-title
+				margin-bottom: 33px
+			.info
+				&-row
+					margin: 0
+				&-col
+					width: 100%
+					max-width: 612px
+					padding: 0
+
+.testimonials
+	background-color: #FCF8ED
+	background-repeat: repeat
+	background-position: 0 0
+	background-image: url(../../img/testimonials/bg.svg)
+	padding: 139px 0 99px
+	.wrapper
+		max-width: 1366px
+	&-mob
+		display: none
+	&-row
+		display: flex
+		flex-flow: row nowrap
+	&-col
+		width: 100%
+		padding-right: 40px
+		&__2
+			min-width: 498px
+			width: 498px
+			padding: 0
+	&-info
+		padding-top: 24px
+		max-width: 600px
+		.section-title
+			margin-bottom: 18px
+		p
+			min-height: 108px
+			font: normal 1.5rem/1.2 $MriyaGrotesk
+			letter-spacing: -0.025em
+			color: #292930
+			margin-bottom: 39px
+		.info-buttons
+			padding: 2px 0 0
+			.info-link
+				margin-left: 25px
+	&-desc
+		background: #fff
+		border-radius: 33px
+		padding: 70px 67px 81px
+		margin-bottom: 38px
+		p
+			font: bold 1.3rem/1.3 $MriyaGrotesk
+			color: rgba(#000, 0.8)
+			margin: 0 0 20px
+		span
+			display: block
+			font: 900 1.5rem/1.2 $MriyaGrotesk
+			color: rgba(#000, 0.8)
+	&-human
+		display: block
+		width: 180px
+		height: 180px
+		border-radius: 50%
+		background: #fff
+		position: relative
+		margin: 0 auto 37px
+		img,svg
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			max-width: 100%
+	&-position
+		display: none
+		text-align: center
+		font-size: 20px
+		line-height: 1.75
+		font-weight: bold
+		color: #000
+	&-slider
+		.slick-arrow
+			width: 64px
+			height: 64px
+			border: 2px solid #515151
+			border-radius: 50%
+			top: auto
+			bottom: 130px
+			transform: translate(0,0)
+			img,svg
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+				display: block
+				max-height: 14px
+		.slick-prev
+			left: 20px
+		.slick-next
+			right: 20px
+
+.steps
+	padding: 187px 0 0
+	text-align: center
+	.wrapper
+		max-width: 1320px
+	.section-title
+		margin-bottom: 16px
+	.slick-list
+		width: 100%
+		overflow: visible
+	&-col
+		padding: 50px 0 44px
+		p
+			max-width: 272px
+			margin: 0 auto
+			font-size: 1rem
+			line-height: 1.75
+			color: #515151
+			padding-bottom: 41px
+		&:hover
+			.steps-wrap
+				background: #fff
+				box-shadow: 0 4px 50px rgba(0, 0, 0, 0.05)
+				.primary-btn
+					opacity: 1
+					visibility: visible
+	&-wrap
+		padding: 0 20px 86px
+		border-radius: 40px
+		.primary-btn
+			opacity: 0
+			visibility: hidden
+	&-img
+		display: block
+		max-width: 460px
+		margin: 0 auto 41px
+		&__wrap
+			padding-bottom: 100%
+			height: 0
+			border-radius: 50%
+			position: relative
+			img,svg
+				cursor: pointer
+				display: block
+				max-width: 100%
+				position: absolute
+				bottom: 0
+				//left: 50%
+				//transform: translate(-50%,0)
+	&-title
+		display: block
+		font-size: 1.3rem
+		line-height: 1.4
+		font-weight: 900
+		letter-spacing: -0.025em
+		text-transform: uppercase
+		color: #292930
+		margin: 0 0 14px
+	&.steps-second
+		.steps
+			&-col
+				padding-bottom: 25px
+	&.steps-green
+		.steps-img__wrap
+			background: #62B3AB
+			box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.25)
+
+.begin
+	background: #F2F7FF
+	&-row
+		display: flex
+		justify-content: flex-end
+		position: relative
+		padding: 175px 0 194px 500px
+	&-img
+		position: absolute
+		left: -85px
+		bottom: -11px
+		img,svg
+			display: block
+			max-width: 510px
+	&-info
+		max-width: 570px
+		width: 100%
+		p
+			line-height: 1.75
+			padding-bottom: 35px
+	&-subtitle
+		display: block
+		font: normal 30px/1.2 $MriyaGrotesk
+		letter-spacing: -0.025em
+		color: #515151
+		margin: 0 0 65px
+
+.actions
+	padding: 149.5px 0
+	text-align: center
+	&-top
+		padding-bottom: 61px
+		.section
+			&-title
+				margin-bottom: 19px
+			&-subtitle
+				margin-bottom: 13px
+	p
+		line-height: 1.75
+		color: #515151
+	&-slider
+		width: auto
+		margin: 0 -15px
+		.slick-arrow
+			width: 64px
+			height: 64px
+			border: 2px solid #7C808A
+			border-radius: 50%
+			z-index: 20
+			img,svg
+				display: block
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+		.slick-prev
+			left: -125px
+		.slick-next
+			right: -125px
+	&-slide
+		padding: 0 15px
+		cursor: pointer
+		transition: $transition
+
+		&:hover
+			opacity: 0.8
+	&-video
+		display: block
+		width: 100%
+		height: 256px
+		border-radius: 25px
+		position: relative
+		background: #cccccc no-repeat center
+		background-size: cover
+		transition: $transition
+		.hb-ico
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+		&:hover
+			opacity: 1
+	&-bottom
+		padding: 64px 0 0
+		p
+			font-size: 1.1rem
+			padding-bottom: 17px
+		.primary-btn
+			margin-top: 30px
+			//padding: 23px 54px 25px
+
+.pricing
+	background: #F4F3FA url(../../img/testimonials/bg.svg) repeat 0 0
+	padding: 152px 0 130px
+	overflow: hidden
+	&-mob
+		display: none
+		padding-bottom: 61px
+		text-align: center
+		&__link
+			font: bold 0.9rem/1.2 $MriyaGrotesk
+			letter-spacing: -0.025em
+			color: #000
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+		p
+			line-height: 1.45
+			color: rgba(0, 0, 0, 0.69)
+			margin-bottom: 18px
+		ul
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			justify-content: center
+			li
+				padding: 0 5.5px
+				a
+					display: inline-block
+					text-align: center
+					white-space: nowrap
+					font: bold 0.7rem/0.85 $MriyaGrotesk
+					text-transform: uppercase
+					color: #978FDC
+					padding: 10px 25px
+					background: #fff
+					box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+					border-radius: 59px
+					&.active
+						background: #978FDC
+						box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25)
+						color: #fff
+	&-top,&-bottom
+		text-align: center
+	&-top
+		//padding-bottom: 83px
+		padding-bottom: 108px
+		.section
+			&-title
+				margin: 0
+			&-subtitle
+				margin-bottom: 15px
+	&-table
+		display: flex
+		flex-flow: row nowrap
+		background: #fff
+		border-radius: 32px
+		box-shadow: 0 0 40px #EAE7FF
+		.tooltip
+			width: 17px
+			height: 17px
+			margin-left: 9px
+			transform: translate(0,1px)
+			cursor: pointer
+	&-col
+		text-align: center
+		font: 600 0.9rem/1rem $OpenSans
+		color: #7C808A
+		letter-spacing: -0.025em
+		img,svg
+			display: block
+			margin: 0 auto
+		&__1
+			border-bottom-left-radius: 32px
+			overflow: hidden
+			width: 27.6%
+			text-align: left
+			.pricing-item
+				justify-content: flex-start
+				padding: 10px 70px
+				&__8
+					font-size: 1.3rem
+					color: #292930
+		&__2
+			width: 21.2%
+			color: #232340
+			box-shadow: 0 4px 50px rgba(0, 0, 0, 0.05)
+			position: relative
+			&::before,&::after
+				content: ''
+				position: absolute
+				left: 0
+				width: 100%
+			&::before
+				top: -25px
+				height: 25px
+				background: #fff
+				border-radius: 20px 20px 0 0
+			&::after
+				bottom: -55px
+				height: 155px
+				border-radius: 0 0 20px 20px
+				background: #85809E
+			.pricing-item
+				img,svg
+					max-width: 174px
+					max-height: 40px
+				&__8
+					display: block
+					height: 106px
+					padding: 29px 30px 0
+					background: #85809E!important
+					a
+						font: normal 0.9rem/1.1 $OpenSans
+						letter-spacing: -0.025em
+						text-decoration: underline
+						color: #fff
+						position: relative
+						z-index: 10
+						&:hover
+							text-decoration: none
+		&__3
+			width: 17.2%
+		&__4
+			width: 13%
+		&__5
+			border-bottom-right-radius: 32px
+			overflow: hidden
+			width: 21%
+			.pricing-item
+				padding: 10px 70px
+				img,svg
+					max-height: 25px
+					max-width: 72px
+	&-title
+		display: block
+		font: bold 1.05rem/1.2 $OpenSans
+		margin: 0 0 20px
+		color: #fff
+		position: relative
+		z-index: 10
+	&-row
+		display: flex
+		flex-flow: row nowrap
+	&-item
+		min-height: 70px
+		padding: 10px 20px
+		display: flex
+		align-items: center
+		justify-content: center
+		&:nth-child(even)
+			background: #FAF9FF
+		&__1
+			height: 137px
+			img,svg
+				max-height: 40px
+				max-width: 122px
+		&__8
+			min-height: 106px
+			font-size: 1.1rem
+	&-bottom
+		padding-top: 124px
+		.primary-btn
+			margin-bottom: 32px
+		p
+			line-height: 1.75
+			color: #333
+	.tooltip
+		&-info
+			text-align: left
+			font: normal 0.8rem/1.1 $OpenSans
+			letter-spacing: -0.025em
+
+.calculate
+	padding: 151px 0 194px
+	position: relative
+	.section
+		&-subtitle
+			margin: 4px 0 13px
+		&-title
+			max-width: 520px
+	&-img
+		position: absolute
+		z-index: 1
+		bottom: -30px
+		left: 10%
+		img,svg
+			display: block
+			max-width: 800px
+	&-row
+		display: flex
+		flex-flow: row wrap
+		margin: 0 -15px
+	&-col
+		width: 50%
+		padding: 0 15px
+	&-info
+		padding-bottom: 52px
+		p
+			line-height: 1.75
+			color: #515151
+			padding-bottom: 25px
+	&-form
+		position: relative
+		z-index: 10
+		display: block
+		max-width: 571px
+		background: #fff
+		border-radius: 40px
+		padding: 73px 70px 79px
+		box-shadow: 0 4px 50px rgba(0, 0, 0, 0.05)
+		.primary-btn
+			max-width: 100%
+			//display: block
+			width: 100%
+	&-title
+		display: block
+		font: 900 1.3rem/1.4 $MriyaGrotesk
+		letter-spacing: -0.025em
+		text-transform: uppercase
+		color: #292930
+		margin: 0 0 32px
+
+.industry
+	padding: 164px 0 155px
+	background-color: rgba(#FFC565, 0.3)
+	background-repeat: repeat
+	background-position: 0 0
+	background-image: url(../../img/bg-2.svg)
+	.section
+		&-subtitle
+			margin-bottom: 12px
+		&-title
+			margin-bottom: 15px
+	&-top
+		text-align: center
+	&-slider
+		max-width: 847px
+		margin: 0 auto
+		.slick-list
+			overflow: visible
+		.slick-arrow
+			top: 173px
+			transform: translate(0,0)
+			width: 64px
+			height: 64px
+			box-shadow: 20px 10px 30px 10px rgba(0, 0, 0, 0.03)
+			border: 1px solid #ECECF1
+			background-color: #fff
+			border-radius: 50%
+			z-index: 20
+			img,svg
+				display: block
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+		.slick-prev
+			left: 16px
+		.slick-next
+			right: 16px
+	&-slide
+		text-align: center
+		padding: 50px 50px 120px
+		position: relative
+		opacity: 0.6
+		&.slick-current.slick-active
+			transition: all 1s
+			opacity: 1
+	&-wrap
+		background: #fff
+		border-radius: 40px
+		padding: 80px 20px
+		max-width: 747px
+		margin: 0 auto
+		box-shadow: 0 3px 4px rgba(#000, 0.25)
+		p
+			max-width: 535px
+			margin: 0 auto
+			font: normal 1.5rem/1.3 $MriyaGrotesk
+			letter-spacing: -0.025em
+			color: #515151
+	&-logo
+		display: flex
+		align-items: center
+		justify-content: center
+		height: auto
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translate(-50%,50%)
+		img,svg
+			display: block
+	&.industry-second
+		padding: 242px 0 230px
+		background-color: #D5BE92
+		background-image: url(../../img/bg-2.svg)
+		.industry
+			&-slider
+				.slick-arrow
+					top: 50%
+					transform: translate(0,-50%)
+			&-slide
+				padding-top: 0
+				padding-bottom: 0
+				p
+					max-width: 630px
+
+.result
+	padding: 0 0 145px
+	.wrapper
+		position: relative
+	&-top
+		padding-top: 150px
+		max-width: 660px
+		.section
+			&-subtitle
+				margin-bottom: 22px
+			&-title
+				max-width: 420px
+				margin-bottom: 29px
+	p
+		line-height: 1.75
+	&-img
+		position: absolute
+		top: 0
+		right: -23px
+		img,svg
+			display: block
+			max-width: 573px
+	&-bar
+		margin: 81px 0 83px
+		padding-top: 57px
+		position: relative
+		&__num
+			position: absolute
+			top: 0
+			font-size: 24px
+			line-height: 1
+			font-weight: normal
+			letter-spacing: -0.025em
+			color: #515151
+			&::after
+				content: ''
+				position: absolute
+				top: 100%
+				width: 1px
+				height: 248px
+				background-color: #E3E6E9
+				margin-top: 7px
+			&-1
+				left: 0
+				&::after
+					left: 0
+			&-2,&-3,&-4
+				transform: translate(-50%,0)
+				&::after
+					left: 50%
+					transform: translate(-50%,0)
+			&-2
+				left: 25%
+			&-3
+				left: 50%
+			&-4
+				left: 75%
+			&-5
+				right: 0
+				&::after
+					right: 0
+		&__row
+			display: flex
+			margin-bottom: 15px
+			position: relative
+			z-index: 10
+		&__item
+			height: 54px
+			padding: 15px 30px
+			&-1
+				width: 50%
+				background: #F4F3FA
+				font: bold 0.9rem/24px $MriyaGrotesk
+			&-2
+				background: #978FDC
+				border-radius: 0 10px 10px 0
+				padding: 15px 20px
+				font: bold 0.8rem/24px $MriyaGrotesk
+				letter-spacing: -0.025em
+				color: #fff
+		&__bottom
+			display: flex
+			flex-flow: row nowrap
+			padding-top: 17px
+			span
+				display: block
+				width: 50%
+				font: 900 1.3rem/1.4 $MriyaGrotesk
+				color: #726F98
+				letter-spacing: -0.025em
+				text-transform: uppercase
+	&-wrap
+		background: #fff
+		border-radius: 40px
+		padding: 42.5px 420px 42.5px 54px
+		position: relative
+		box-shadow: 0 4px 50px rgba(0, 0, 0, 0.05)
+		margin-bottom: 40px
+		.primary-btn
+			position: absolute
+			top: 50%
+			right: 67px
+			transform: translate(0,-50%)
+		p
+			font-size: 1rem
+			line-height: 1.75
+			color: #494949
+	&-title
+		display: block
+		font: normal 1.8rem/1.2 $MriyaGrotesk
+		color: #292930
+		letter-spacing: -0.025em
+	&-bottom
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		justify-content: center
+		text-align: center
+		font-size: 1rem
+		line-height: 1.75
+		color: #494949
+		a
+			color: #494949
+			text-decoration: underline
+			margin-left: 6px
+			&:hover
+				text-decoration: none
+		.hb-ico
+			margin-left: 13px
+			transform: translate(0,2px)
+
+.guarantee
+	background-color: rgba(#FEF2F2, 0.7)
+	background-repeat: repeat
+	background-position: 0 0
+	background-image: url(../../img/testimonials/bg.svg)
+	padding: 111px 0 181px
+	text-align: center
+	&-ico
+		display: block
+		width: 165px
+		height: 165px
+		border-radius: 50%
+		background: #FFB3B4
+		position: relative
+		margin: 0 auto 53px
+		img,svg
+			display: block
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+	.section
+		&-title
+			font-size: 3.75rem
+			margin-bottom: 22px
+	p
+		font-size: 1.1rem
+		line-height: 1.75
+		color: #515151
+		max-width: 876px
+		margin: 0 auto 78px
+	&-button
+		position: relative
+
+@media only screen and (max-width : 1500px)
+	.actions
+		.slick-arrow
+			display: none!important
+
+@media only screen and (max-width : 1250px)
+	.main
+		.wrapper
+			padding: 200px 30px 150px
+		&-img
+			left: auto
+			right: -200px
+			img,svg
+				max-width: 700px
+	.info
+		&-bg
+			img,svg
+				max-height: 457px
+			&__1
+				left: -110px
+	.calculate
+		&-img
+			img,svg
+				max-width: 650px
+	.guarantee
+		&-button
+			&::before,&::after
+				width: 330px
+
+@media only screen and (max-width : 1160px)
+	.main
+		&-img
+			right: -180px
+			img,svg
+				max-width: 600px
+		&-info
+			max-width: 530px
+		&-title
+			font-size: 2.5rem
+	.info
+		&-top
+			img,svg
+				margin-right: 0
+		p
+			font-size: 1.1rem
+			line-height: 1.2
+			padding-bottom: 25px
+		ul
+			li
+				font-size: 1.4rem
+				margin-bottom: 33px
+		&-buttons
+			display: inline-block
+			padding-top: 40px
+		&-button
+			padding-top: 40px
+		&-link
+			justify-content: center
+			margin: 20px 0 0
+		&-block
+			&.info-1
+				padding: 81px 0
+			&.info-2
+				padding: 80px 0 92px
+			&.info-3
+				padding: 75px 0 80px
+			&.info-4
+				min-height: auto
+				padding: 80px 0 88px
+				.info
+					&-button
+						padding-top: 40px
+			&.info-5
+				min-height: auto
+				padding: 120px 0
+			&.info-6
+				padding: 180px 0 75px
+	.steps
+		padding-bottom: 30px
+	.pricing
+		&-top
+			padding-bottom: 35px
+		&-mob
+			display: block
+			&__link
+				display: inline-block
+				margin-top: 40px
+		&-table
+			margin-bottom: 120px
+		&-col
+			width: 23.333%
+			&__1
+				width: 30%
+			&__5
+				display: none
+		&-bottom
+			padding: 0
+			.primary-btn
+				margin-bottom: 24px
+	.calculate
+		&-img
+			img,svg
+				max-width: 550px
+	.result
+		&-img
+			right: -30px
+			img,svg
+				max-width: 287px
+	.guarantee
+		&-button
+			&::before,&::after
+				width: 250px
+
+@media only screen and (max-width : 960px)
+	.main
+		&-img
+			right: -150px
+			img,svg
+				max-width: 500px
+	.testimonials
+		padding: 75px 0 93px
+		&-row
+			display: block
+		&-col
+			width: 100%
+			min-width: auto
+		&-info
+			max-width: 100%
+			padding: 0 0 58px
+			p
+				min-height: auto
+				font-size: 1.1rem
+				line-height: 1.2
+				margin-bottom: 11px
+				&:last-child
+					margin-bottom: 0
+			.info-buttons
+				display: none
+		&-descr
+			margin-bottom: 90px
+		&-human
+			margin-bottom: 18px
+		&-position
+			font-size: 0.9rem
+			line-height: 1.45
+			color: #515151
+		&-mob
+			display: block
+			text-align: center
+			.info-buttons
+				padding-top: 57px
+	.steps
+		padding: 73px 0 30px
+	.begin
+		padding: 78px 0 86px
+		&-row
+			display: block
+			padding: 0
+		&-img
+			position: static
+			margin-bottom: 50px
+			img,svg
+				max-width: 340px
+				margin: 0 auto
+		&-info
+			max-width: 100%
+	.actions
+		padding: 80px 0
+		&-bottom
+			p
+				font-size: 1rem
+				line-height: 1.45
+	.pricing
+		padding: 82px 0 91px
+		&-col
+			width: 30%
+			&__1
+				width: 40%
+				.pricing
+					&-item
+						padding: 10px 20px
+			&__4
+				display: none
+	.calculate
+		padding: 75px 0 121px
+		.section-subtitle,.section-title
+			position: relative
+			z-index: 10
+		.section-subtitle
+			margin: 0 0 13px
+		.section-title
+			max-width: 100%
+			margin: 0
+		&-row
+			display: block
+		&-col
+			width: 100%
+		&-img
+			position: static
+			margin-top: -80px
+			z-index: -1
+			margin-bottom: 45px
+			margin-left: -30px
+			img,svg
+				max-width: 430px
+				width: 100%
+		&-info
+			padding-bottom: 50px
+			p
+				line-height: 1.45
+		&-form
+			max-width: 100%
+	.guarantee
+		&-button
+			&::before,&::after
+				display: none
+
+@media only screen and (max-width : 767px)
+	.main
+		.wrapper
+			padding: 157px 25px 54px
+		&-info
+			p
+				min-height: 245px
+				font-size: 0.9rem
+				padding-right: 60px
+				margin-bottom: 80px
+		&-title
+			font-size: 2.2rem
+			margin-bottom: 20px
+		&-img
+			right: -131px
+			img,svg
+				max-width: 460px
+	.info
+		&-top
+			flex-flow: row wrap
+			padding-bottom: 30px
+			.section-title
+				width: 100%
+				max-width: 100%
+				margin: 0
+				padding-top: 30px
+			img,svg
+				order: -1
+				max-width: 120px
+				max-height: 120px
+		&-row
+			flex-flow: row wrap
+		&-col
+			width: 100%
+			img,svg
+				margin: 0 auto
+			.section-title
+				margin: 30px 0
+		&-bg
+			&__2
+				display: none
+		&-block
+			&.info-1
+				p,ul
+					max-width: 100%
+				ul
+					padding-top: 10px
+					li
+						margin: 33px 0 0
+						span
+							display: inline-block
+							padding-bottom: 10px
+			&.info-2
+				.info
+					&-top
+						.section-title
+							margin: 0
+					&-col
+						padding-bottom: 25px
+						&:last-child
+							padding-bottom: 0
+			&.info-3
+				.info
+					&-col
+						p
+							max-width: 100%
+			&.info-4
+				.info
+					&-col
+						&__img
+							order: -1
+						p
+							max-width: 100%
+			&.info-5
+				padding: 51px 0 85px
+				.info
+					&-row
+						flex-flow: row wrap
+					&-col
+						width: 100%
+						img,svg
+							position: static
+							transform: translate(0,0)
+	.steps
+		padding: 73px 0 100px
+		.section-title
+			margin-bottom: 64px
+		&-row
+			padding-bottom: 74px
+		&-col
+			padding: 0
+			&:hover
+				.steps-wrap
+					background: transparent
+					box-shadow: none
+			&.slick-current.slick-active
+				.steps-wrap
+					background: #fff
+					box-shadow: 0 4px 50px rgba(0, 0, 0, 0.05)
+		&-wrap
+			padding: 70px 20px 53px
+			border-radius: 30px
+			.primary-btn
+				opacity: 1
+				visibility: visible
+	.begin
+		&-info
+			.section-title
+				margin-bottom: 21px
+			p
+				line-height: 1.45
+				padding-bottom: 30px
+		&-subtitle
+			font-size: 1.1rem
+			margin-bottom: 37px
+	.actions
+		&-top
+			padding-bottom: 45px
+			p
+				line-height: 1.45
+		&-bottom
+			padding-top: 32px
+	.pricing
+		&-top
+			padding-bottom: 35px
+		&-table
+			margin-bottom: 70px
+		&-item
+			padding: 10px
+			&__1
+				height: 104px
+				img,svg
+					display: block
+					max-width: 100%
+			&__8
+				font-size: 0.75rem
+		&-col
+			font-size: 0.65rem
+			line-height: 1.1
+			&__1
+				.pricing-item__8
+					font-size: 0.75rem
+					line-height: 1.2
+					.i-ico-big
+						width: 15px
+						height: 15px
+			&__2
+				&::after
+					bottom: -18px
+					height: 100px
+				.pricing
+					&-item
+						&__1
+							img,svg
+								max-width: 48px
+								max-height: 54px
+						&__8
+							a
+								display: none
+		&-title
+			font-size: 0.7rem
+			line-height: 1.2
+		&-bottom
+			p
+				line-height: 1.45
+	.calculate
+		&-img
+			margin-left: -25px
+		&-form
+			padding: 52px 30px 55px
+			border-radius: 23px
+			.input-col
+				width: 100%
+			.input-block
+				margin-bottom: 20px
+		&-title
+			margin-bottom: 27px
+	.industry
+		padding: 78px 0
+		&-slider
+			.slick-arrow
+				top: auto
+				bottom: 24px
+				width: 38px
+				height: 38px
+				img,svg
+					max-height: 12px
+		&-slide
+			padding: 48px 0 100px
+		&-wrap
+			padding: 73px 20px
+			p
+				font-size: 1rem
+				line-height: 1.1
+				opacity: 0.8
+				max-width: 230px
+				margin: 0 auto
+		&.industry-second
+			padding: 130px 0 95px
+			.wrapper
+				padding: 0
+			.industry
+				&-slider
+					padding-bottom: 76px
+					.slick-arrow
+						top: auto
+						bottom: 0
+					.slick-prev
+						left: 50%
+						transform: translate(-110%,0)
+					.slick-next
+						right: 50%
+						transform: translate(110%,0)
+				&-slide
+					padding: 0 17px
+					p
+						opacity: 1
+						max-width: 260px
+	.result
+		padding: 0 0 82px
+		&-top
+			padding: 158px 0 0 0
+			.section-title
+				padding-right: 120px
+			p
+				line-height: 1.45
+		&-bar
+			margin: 32px 0 50px
+			&__num
+				font-size: 0.7rem
+				line-height: 1.2rem
+			&__item
+				&-1,&-2
+					min-height: 55px
+					display: flex
+					align-items: center
+					font-size: 0.7rem
+					line-height: 0.75rem
+					padding: 12px
+			&__bottom
+				padding-top: 38px
+				span
+					font-size: 0.7rem
+					line-height: 1.4
+					padding-right: 10px
+		&-wrap
+			display: block
+			padding: 60px 25px
+			margin-bottom: 50px
+			p
+				line-height: 1.45
+				padding-bottom: 36px
+			.primary-btn
+				position: static
+				transform: translate(0,0)
+		&-title
+			font-size: 1.6rem
+			line-height: 1.1
+			margin: 0 0 24px
+		&-bottom
+			display: inline-block
+			line-height: 1.45
+			.hb-ico
+				margin-bottom: -5px
+				margin-left: 11px
+	.guarantee
+		padding: 80px 0
+		&-ico
+			width: 90px
+			height: 90px
+			margin-bottom: 37px
+			img,svg
+				max-width: 43px
+				max-height: 46px
+		.section-subtitle
+			margin-bottom: 14px
+		.section-title
+			font-size: 1.75rem
+			line-height: 1.1
+			margin-bottom: 40px
+		p
+			font-size: 1rem
+			line-height: 1.45
+			color: #515151
+			margin-bottom: 46px
+
+@media only screen and (max-width : 600px)
+	.main
+		&-img
+			img,svg
+				max-width: 405px
+	.testimonials
+		&-slider
+			.slick-arrow
+				bottom: 100px
+				width: 38px
+				height: 38px
+				border-width: 1px
+				img,svg
+					max-height: 12px
+			.slick-prev
+				left: 40px
+			.slick-next
+				right: 40px
+		&-descr
+			text-align: center
+			padding: 58px 25px 38px
+			margin-bottom: 60px
+			p
+				font-size: 1rem
+				line-height: 1.1
+				color: rgba(#515151, 0.8)
+				max-width: 260px
+				margin: 0 auto 30px
+			span
+				font-size: 1rem
+				line-height: 1.2
+		&-human
+			width: 114px
+			height: 114px
+		&-position
+			max-width: 200px
+			margin: 0 auto
+	.steps
+		&-col
+			p
+				line-height: 1.45
+				padding-bottom: 30px
+			.primary-btn
+				padding: 23px 30px
+		&-img
+			width: 230px
+			margin-bottom: 60px
+		&-title
+			font-size: 1.25rem
+			line-height: 1.5
+			margin-bottom: 23px
+
+@media only screen and (max-width : 370px)
+	.main
+		.wrapper
+			padding-left: 15px
+			padding-right: 15px
+	.steps
+		&-col
+			.primary-btn
+				padding: 23px 20px
+	.calculate
+		&-img
+			margin-left: -15px

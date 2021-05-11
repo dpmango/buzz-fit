@@ -1,0 +1,191 @@
+@import "../vars"
+
+.invoice
+	margin-top: 150px
+	padding: 87px 0 114px
+	background-color: #EFF8FA
+	background-repeat: repeat
+	background-position: 0 0
+	background-image: url(../../img/testimonials/bg.svg)
+	&-title
+		display: block
+		text-align: center
+		font: 900 1.8rem/1.2 $MriyaGrotesk
+		letter-spacing: -0.025em
+		color: #292930
+		margin: 0 0 35px
+	&-wrap
+		max-width: 818px
+		width: 100%
+		margin: 0 auto
+		background: #fff
+		border-radius: 24px
+		box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05)
+		overflow: hidden
+	&-top
+		display: flex
+		flex-flow: row nowrap
+		align-items: center
+		justify-content: space-between
+		background: #61B2AA
+		padding: 35px 50px 37px 60px
+	&-logo
+		a,img,svg
+			display: block
+	&-links
+		font-size: 0.75rem
+		line-height: 1.5
+		color: #fff
+		padding: 0 10px
+		span,a
+			display: block
+			margin-bottom: 4px
+		a
+			color: #fff
+	&-descr
+		&__subtitle
+			display: block
+			font-size: 0.75rem
+			line-height: 1.5
+			font-weight: bold
+			color: #fff
+			margin: 0 0 8px
+		p
+			font-size: 15px
+			line-height: 1.5
+			color: #fff
+	&-info
+		display: flex
+		flex-flow: row nowrap
+		padding: 45px 60px
+		span
+			display: block
+			font-size: 0.75rem
+			line-height: 1.5
+			color: #515151
+			margin-bottom: 3px
+		b
+			display: block
+			font-size: 1.2rem
+			line-height: 1.5
+			font-weight: bold
+			color: #292930
+		p
+			padding-top: 4px
+			font-size: 0.75rem
+			line-height: 1.5
+			font-weight: bold
+			max-width: 170px
+	&-col
+		width: 33.333%
+	&-content
+		background: rgba(#EFF8FA, 0.5)
+		padding: 30px 60px 101px
+	&-table
+		&__row
+			display: flex
+			flex-flow: row nowrap
+			border-bottom: 2px solid #E6EDEF
+			padding: 23px 0 35px
+			font-size: 0.75rem
+			line-height: 1.5
+			font-weight: bold
+			color: #292930
+			span
+				display: none
+		&__top
+		  padding-bottom: 23px
+		  font-weight: normal
+		  color: #515151
+		&__col
+		 	&-1
+		 		width: 41%
+		 	&-2
+		 		width: 28%
+		 	&-3
+		 		width: 22%
+		 	&-4
+		 		min-width: 110px
+	&-bottom
+		text-align: center
+		padding: 40px 0 50px
+		.primary-btn
+			padding: 18px 43px
+
+@media only screen and (max-width : 767px)
+	.invoice
+		margin-top: 108px
+		padding: 53px 0 80px
+		&-title
+			font-size: 1.75rem
+			line-height: 1.1
+			margin-bottom: 37px
+		&-top
+			display: block
+			padding: 37px 24px 31px
+		&-logo
+			margin-bottom: 29px
+			a,img,svg
+				margin: 0 auto
+		&-links
+			display: flex
+			flex-flow: row nowrap
+			align-items: flex-start
+			padding: 0 0 17px
+			a,span
+				width: 50%
+				margin: 0
+			div
+				width: 50%
+				a,span
+					width: 100%
+		&-descr
+			&__subtitle
+				margin-bottom: 4px
+		&-info
+			display: block
+			padding: 37px 34px 16px
+		&-col
+			display: flex
+			flex-flow: row nowrap
+			width: 100%
+			padding-bottom: 23px
+			span
+				display: block
+				min-width: 102px
+				width: 102px
+				padding-right: 10px
+			p
+				max-width: 100%
+				padding: 0
+		&-content
+			padding: 38px 34px 25px
+		&-table
+			&__row
+				display: block
+				border: none
+				padding: 0
+				span
+					display: block
+					font-weight: normal
+					min-width: 102px
+					width: 102px
+					padding-right: 10px
+			&__top
+				display: none
+			&__col
+				display: flex
+				flex-flow: row nowrap
+				align-items: center
+				padding: 0 0 10px
+				width: 100%
+				max-width: 100%
+				min-width: auto
+		&-bottom
+			padding: 27px 34px 38px
+
+@media only screen and (max-width : 370px)
+	.invoice
+		&-bottom
+			.primary-btn
+				padding: 18px 20px

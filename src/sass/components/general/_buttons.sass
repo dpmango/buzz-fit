@@ -1,0 +1,61 @@
+@import "../../vars"
+
+.primary-btn
+  display: inline-flex
+  text-align: center
+  white-space: nowrap
+  font: bold 0.9rem/1 $MriyaGrotesk
+  align-items: center
+  justify-content: center
+  color: #fff
+  text-transform: uppercase
+  padding: 0 62.5px
+  height: 70px
+  max-width: 330px
+  background: #61B2AA
+  border: 1px solid #fff
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15)
+  border-radius: 59px
+
+  &:hover
+    background: lighten(#61B2AA, 5%)
+
+  &-yellow
+    background: #FFC565
+    color: #292930
+
+    &:hover
+      background: lighten(#FFC565, 5%)
+
+  &-peach
+    background: #FFB3B4
+    color: #292930
+
+    &:hover
+      background: lighten(#FFB3B4, 5%)
+
+  &-purple
+    background: #978FDC
+
+    &:hover
+      background: lighten(#978FDC, 5%)
+
+  &-blue
+    background: #5288DF
+
+    &:hover
+      background: lighten(#5288DF, 5%)
+
+  &-green
+    background: #A9BB55
+
+    &:hover
+      background: lighten(#A9BB55, 5%)
+
+  &:disabled
+    background: gray
+    cursor: not-allowed
+
+@media only screen and (max-width: 767px)
+  .primary-btn
+    padding: 23px 46.5px

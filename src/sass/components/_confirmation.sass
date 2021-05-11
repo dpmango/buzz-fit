@@ -1,0 +1,60 @@
+@import "../vars"
+
+.confirmation
+	padding: 132px 0
+	&-wrap
+		max-width: 562px
+		margin: 0 auto
+	&-logo
+		margin-bottom: 88px
+		a,img,svg
+			display: block
+			margin: 0 auto
+	&-title
+		display: block
+		font: bold 2.25rem/1.2 $MriyaGrotesk
+		letter-spacing: -0.025em
+		color: #292930
+		text-align: center
+		margin: 0 0 28px
+	&-img
+		img,svg
+			display: block
+			max-width: 200px
+			margin: 0 auto
+	p, ul li
+		line-height: 1.75
+		color: #515151
+		padding-bottom: 25px
+	&-button
+		text-align: center
+		padding-top: 42px
+		.primary-btn
+			padding: 28px 41px
+
+@media only screen and (max-width : 1160px)
+	.confirmation
+		padding: 80px 0
+		&-logo
+			margin-bottom: 74px
+		&-title
+			margin-bottom: 10px
+
+@media only screen and (max-width : 960px)
+	.confirmation
+		&-title
+			margin-bottom: 4px
+		&-img
+			margin-bottom: 25px
+
+@media only screen and (max-width : 767px)
+	.confirmation
+		padding: 60px 0
+		&-title
+			font-size: 1.75rem
+			line-height: 1.1
+		p, ul li
+			line-height: 1.45
+			padding-bottom: 20px
+		&-button
+			padding-top: 13px

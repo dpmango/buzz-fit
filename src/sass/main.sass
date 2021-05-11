@@ -1,0 +1,195 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+  color: rgba(#7C808A, 1)
+
+*:-moz-placeholder
+  color: rgba(#7C808A, 1)
+
+*::-moz-placeholder
+  color: rgba(#7C808A, 1)
+
+*:-ms-input-placeholder
+  color: rgba(#7C808A, 1)
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  outline: none
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+a, a:hover, a:focus, a:active, a:visited
+  text-decoration: none
+  transition: opacity 0.3s
+
+  &:hover
+    opacity: .8
+
+ul, ol
+  list-style: none
+
+html, body
+  overflow-x: hidden
+
+  &.scroll-hidden
+    overflow: hidden
+
+html
+  font-size: 18px
+
+p
+  line-height: 1.35
+
+body
+  font: normal 1rem/1.2 $OpenSans
+  color: #292930
+  text-rendering: optimizeLegibility
+  -webkit-font-smoothing: antialiased
+  position: relative
+
+img
+  max-width: 100%
+  height: auto
+
+input, textarea, select, button
+  font-family: $OpenSans
+  appearance: none
+  box-shadow: none
+
+button
+  cursor: pointer
+  transition: $transition
+  border: none
+  background: transparent
+
+.wrapper
+  max-width: 1230px
+  margin: 0 auto
+  padding: 0 30px
+
+.swiper-container
+  width: 100%
+  height: 100%
+
+.section
+  &-subtitle
+    display: block
+    font: normal 0.9rem/22px $OpenSans
+    letter-spacing: 0.25em
+    text-transform: uppercase
+    color: #292930
+    margin: 0 0 4px
+
+  &-title
+    display: block
+    font: 900 2.25rem/1.2 $MriyaGrotesk
+    letter-spacing: -0.025em
+    margin: 0 0 53px
+
+.tooltip
+  position: relative
+  cursor: pointer
+  z-index: 10
+
+  &-info
+    position: absolute
+    top: 100%
+    left: -47px
+    margin-top: 13px
+    background: #fff
+    border-radius: 16.4219px
+    width: 264px
+    padding: 23px 18px
+    font-size: 16px
+    line-height: 1.1
+    color: #7C808A
+    letter-spacing: -0.025em
+    opacity: 0
+    visibility: hidden
+    transition: $transition
+    text-align: left
+    box-shadow: 3px 4px 41.0549px rgba(133, 128, 158, 0.22)
+    border: 1px solid #D2D2D2
+    z-index: 20
+
+    &::after
+      content: ''
+      position: absolute
+      top: -12px
+      left: 43px
+      border-bottom: 16px solid #fff
+      border-left: 11px solid transparent
+      border-right: 11px solid transparent
+
+  &:hover
+    z-index: 30
+
+    .tooltip
+      &-info
+        opacity: 1
+        visibility: visible
+        z-index: 30
+
+.slick-dotted.slick-slider
+  margin: 0
+
+.slick-dots
+  bottom: 0
+
+  li
+    width: 14px
+    height: 14px
+    border: 2px solid #7C808A
+    border-radius: 50%
+    margin: 0 10.5px
+
+    &.slick-active
+      border-color: #61B2AA
+      background: #61B2AA
+
+.slick-arrow
+  z-index: 20
+
+@media only screen and (max-width: 960px)
+  .section-title
+    font-size: 1.75rem
+    line-height: 1.1
+    margin-bottom: 30px
+
+@media only screen and (max-width: 767px)
+  .wrapper
+    padding: 0 25px
+
+@media only screen and (max-width: 370px)
+  .wrapper
+    padding: 0 15px
+
+@import "components/general/icons"
+@import "components/general/buttons"
+@import "components/general/inputs-selects-check"
+@import "components/general/modals"
+@import "components/header"
+@import "components/home"
+@import "components/footer"
+@import "components/contentPage"
+@import "components/howItWorks"
+@import "components/device"
+@import "components/calculator"
+@import "components/about"
+@import "components/contactUs"
+@import "components/faq"
+@import "components/checkout"
+@import "components/thankYou"
+@import "components/invoice"
+@import "components/confirmation"
+@import "components/terms"
+
+.tab
+  display: none
+
+  &.tab-active
+    display: block
+		
