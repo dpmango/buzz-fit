@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import routes from '@config/routes';
 
-export default function Footer() {
+const Footer = ({ ...props }) => {
   return (
     <footer className="footer">
       <div className="wrapper">
@@ -13,18 +13,18 @@ export default function Footer() {
         <div className="footer-row">
           <div className="footer-col footer-col__1">
             <div className="footer-logo">
-              <Link to="/">
+              <Link to="/" target="_blank">
                 <img src="/img/logo-2.svg" alt="" />
               </Link>
             </div>
             <ul className="social">
               <li>
-                <Link to="/">
+                <Link to="https://instagram.com/" target="_blank">
                   <img src="/img/social/inst.svg" alt="" />
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="https://twitter.com/" target="_blank">
                   <img src="/img/social/twit.svg" alt="" />
                 </Link>
               </li>
@@ -38,13 +38,13 @@ export default function Footer() {
                 <Link to={routes.STATIC.ABOUT}>About us</Link>
               </li>
               <li>
-                <Link to="/how">How it works</Link>
+                <Link to={routes.INFO.HOW}>How it works</Link>
               </li>
               <li>
-                <Link to="/device">Device</Link>
+                <Link to={routes.INFO.DEVICE}>Device</Link>
               </li>
               <li>
-                <Link to="/order">Buy now</Link>
+                <Link to={routes.ORDER.ROOT}>Buy now</Link>
               </li>
             </ul>
           </div>
@@ -52,7 +52,7 @@ export default function Footer() {
             <span className="footer-subtitle">Support</span>
             <ul>
               <li>
-                <Link to="/faq">FAQ</Link>
+                <Link to={routes.STATIC.FAQ}>FAQ</Link>
               </li>
               <li>
                 <Link to={routes.STATIC.CONTACT}>Contact us</Link>
@@ -78,10 +78,14 @@ export default function Footer() {
             <span className="footer-subtitle">Community</span>
             <ul>
               <li>
-                <Link to="/">Blog</Link>
+                <Link to="" target="_blank">
+                  Blog
+                </Link>
               </li>
               <li>
-                <Link to="/">Advertise with us</Link>
+                <Link to="/" target="_blank">
+                  Advertise with us
+                </Link>
               </li>
             </ul>
           </div>
@@ -89,4 +93,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

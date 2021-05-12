@@ -8,10 +8,22 @@ import { AuthStoreContext } from '@store/AuthStore';
 
 import ProtectedRoute from './ProtectedRoute';
 import NoMatch from './NoMatch';
-import StaticRouter from './StaticRouter';
-import Home from './Pages/Home';
-import Auth from './Pages/Auth';
-import Order from './Pages/Order';
+import {
+  Home,
+  Auth,
+  Order,
+  How,
+  Content,
+  Device,
+  About,
+  Contact,
+  Terms,
+  Privacy,
+  Billing,
+  Delivery,
+  Refund,
+  FAQ,
+} from '@components/Routes';
 
 const Routes = observer(() => {
   const location = useRouteMatch(routes.ADMIN.ROOT);
@@ -28,8 +40,50 @@ const Routes = observer(() => {
           <Order />
         </Route>
 
-        <Route path={routes.STATIC.ORDER}>
-          <StaticRouter />
+        {/* info routes */}
+        <Route path={routes.INFO.HOW}>
+          <How />
+        </Route>
+
+        <Route path={routes.INFO.CONTENT}>
+          <Content />
+        </Route>
+
+        <Route path={routes.INFO.DEVICE}>
+          <Device />
+        </Route>
+
+        {/* static routes */}
+        <Route path={routes.STATIC.ABOUT}>
+          <About />
+        </Route>
+
+        <Route path={routes.STATIC.CONTACT}>
+          <Contact />
+        </Route>
+
+        <Route path={routes.STATIC.TERMS}>
+          <Terms />
+        </Route>
+
+        <Route path={routes.STATIC.PRIVACY}>
+          <Privacy />
+        </Route>
+
+        <Route path={routes.STATIC.BILLING}>
+          <Billing />
+        </Route>
+
+        <Route path={routes.STATIC.DELIVERY}>
+          <Delivery />
+        </Route>
+
+        <Route path={routes.STATIC.REFUND}>
+          <Refund />
+        </Route>
+
+        <Route path={routes.STATIC.REFUND}>
+          <FAQ />
         </Route>
 
         {/* <ProtectedRoute exact path={routes.PERSONAL}>

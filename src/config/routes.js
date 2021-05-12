@@ -9,8 +9,12 @@ export default {
     ROOT: '/order',
     CONFIRMATION: '/order/confirmation',
   },
+  INFO: {
+    HOW: '/how',
+    CONTENT: '/content',
+    DEVICE: '/device',
+  },
   STATIC: {
-    ROOT: '/',
     ABOUT: '/about',
     CONTACT: '/contact',
     TERMS: '/terms',
@@ -18,6 +22,7 @@ export default {
     BILLING: '/billing',
     DELIVERY: '/delivery',
     REFUND: '/refund',
+    FAQ: '/faq',
   },
   ADMIN: {
     ROOT: '/admin',

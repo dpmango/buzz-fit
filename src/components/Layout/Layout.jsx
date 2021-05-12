@@ -17,10 +17,10 @@ const VariantClasses = {
 
 const Layout = ({ variant, children }) => {
   return (
-    <div className={cns('layout', variant && VariantClasses[variant])}>
+    <div className={cns('react-app', variant && VariantClasses[variant])}>
       <Header />
 
-      <main className="main">{children}</main>
+      {children}
 
       <Footer />
     </div>

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Header() {
+import routes from '@config/routes';
+
+const Header = ({ ...props }) => {
   return (
     <header className="header">
       <div className="wrapper">
@@ -16,13 +18,13 @@ export default function Header() {
           </Link>
           <ul className="header-list">
             <li>
-              <Link to="/how">How it works</Link>
+              <Link to={routes.INFO.HOW}>How it works</Link>
             </li>
             <li>
-              <Link to="/content">Content</Link>
+              <Link to={routes.INFO.CONTENT}>Content</Link>
             </li>
             <li>
-              <Link to="/device">Device</Link>
+              <Link to={routes.INFO.DEVICE}>Device</Link>
             </li>
             <li>
               <a href="https://app.buzz.fit">
@@ -63,7 +65,7 @@ export default function Header() {
               Login
             </a>
           </div>
-          <Link to="/order" className="primary-btn">
+          <Link to={routes.ORDER.ROOT} className="primary-btn">
             Get Now
           </Link>
         </div>
@@ -73,4 +75,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;
