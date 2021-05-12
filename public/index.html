@@ -13,6 +13,14 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <title>Buzz Fit</title>
+
+    <script>
+      window.REACT_ENV = {
+        GATEWAY_URL: 'http://test.me:3000',
+        API_TIMEOUT: 3000,
+        API_RETRY_DELAY: 1500,
+      };
+    </script>
 </head>
 <body>
 <div id="root"></div>
