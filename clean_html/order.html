@@ -18,12 +18,12 @@
 </head>
 <body>
 <!-- start header -->
-<header class="header">
-    <div class="wrapper">
-        <div class="header-logo"><a href="/"><img src="img/logo-2.svg" alt=""></a></div>
-        <div class="header-row">
-            <a href="/" class="header-link">Home</a>
-            <ul class="header-list">
+<header className="header">
+    <div className="wrapper">
+        <div className="header-logo"><a href="/"><img src="img/logo-2.svg" alt=""/></a></div>
+        <div className="header-row">
+            <a href="/" className="header-link">Home</a>
+            <ul className="header-list">
                 <li><a href="how.html">How it works</a></li>
                 <li><a href="content.html">Content</a></li>
                 <li><a href="device.html">Device</a></li>
@@ -39,7 +39,7 @@
                     Login
                 </a></li>
             </ul>
-            <div class="header-mob">
+            <div className="header-mob">
                 <a href="https://app.buzz.fit">
                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -52,45 +52,45 @@
                     Login
                 </a>
             </div>
-            <a href="order.html" class="primary-btn">Get Now</a>
+            <a href="order.html" className="primary-btn">Get Now</a>
         </div>
-        <div class="header-bar"><span></span></div>
+        <div className="header-bar"><span></span></div>
     </div>
 </header>
 <!-- end header -->
 <!-- start checkout -->
-<section class="checkout">
-    <div class="wrapper">
-        <div class="checkout-top">
-            <div class="checkout-step active">
+<section className="checkout">
+    <div className="wrapper">
+        <div className="checkout-top">
+            <div className="checkout-step active">
                 <b>Step 1</b>
                 <span>Customer Info</span>
             </div>
-            <div class="checkout-step">
+            <div className="checkout-step">
                 <b>Step 2</b>
                 <span>Payment</span>
             </div>
         </div>
         <form action="">
-            <div class="checkout-wrap">
-                <div class="checkout-content">
-                    <div class="checkout-block">
-                        <span class="checkout-subtitle">Personal information</span>
-                        <div class="checkout-row">
-                            <div class="checkout-col">
-                                <div class="input-block">
+            <div className="checkout-wrap">
+                <div className="checkout-content">
+                    <div className="checkout-block">
+                        <span className="checkout-subtitle">Personal information</span>
+                        <div className="checkout-row">
+                            <div className="checkout-col">
+                                <div className="input-block">
                                     <label for="i-1">Email</label>
                                     <input id="i-1" type="email" name="email" placeholder="Enter email">
                                 </div>
                             </div><!-- col -->
-                            <div class="checkout-col">
-                                <div class="input-block">
+                            <div className="checkout-col">
+                                <div className="input-block">
                                     <label for="i-2">Confirm email</label>
                                     <input id="i-2" type="email" name="email" placeholder="Confirm email">
                                 </div>
                             </div><!-- col -->
-                            <div class="checkout-col checkout-col__33">
-                                <div class="input-block">
+                            <div className="checkout-col checkout-col__33">
+                                <div className="input-block">
                                     <label for="i-3">Title</label>
                                     <select name="text" id="i-3">
                                         <option value="">Select title</option>
@@ -98,58 +98,58 @@
                                     </select>
                                 </div>
                             </div><!-- col -->
-                            <div class="checkout-col checkout-col__33">
-                                <div class="input-block">
+                            <div className="checkout-col checkout-col__33">
+                                <div className="input-block">
                                     <label for="i-4">First name</label>
                                     <input id="i-4" type="text" name="text" placeholder="Enter First name">
                                 </div>
                             </div><!-- col -->
-                            <div class="checkout-col checkout-col__33">
-                                <div class="input-block">
+                            <div className="checkout-col checkout-col__33">
+                                <div className="input-block">
                                     <label for="i-5">Last name</label>
                                     <input id="i-5" type="text" name="text" placeholder="Enter last name">
                                 </div>
                             </div><!-- col -->
-                            <div class="checkout-col">
-                                <div class="input-block">
+                            <div className="checkout-col">
+                                <div className="input-block">
                                     <label for="i-6">Your NPI number</label>
                                     <input id="i-6" type="text" name="text" placeholder="Enter NPI number">
                                 </div>
                             </div><!-- col -->
-                            <div class="checkout-col">
-                                <div class="input-block">
+                            <div className="checkout-col">
+                                <div className="input-block">
                                     <label for="i-7">Phone number</label>
                                     <input id="i-7" type="text" name="text" placeholder="+1 ">
                                 </div>
                             </div><!-- col -->
                         </div>
                     </div>
-                    <div class="checkout-block">
-                        <span class="checkout-subtitle checkout-subtitle__mob">Shipping details</span>
-                        <div class="checkout-row">
-                            <div class="checkout-col checkout-col__100">
-                                <div class="input-block">
+                    <div className="checkout-block">
+                        <span className="checkout-subtitle checkout-subtitle__mob">Shipping details</span>
+                        <div className="checkout-row">
+                            <div className="checkout-col checkout-col__100">
+                                <div className="input-block">
                                     <label for="o-1">Business name</label>
                                     <input id="o-1" type="text" name="text" placeholder="Business name">
                                 </div>
                             </div><!-- col -->
-                            <div class="checkout-col checkout-col__100">
-                                <div class="input-block">
+                            <div className="checkout-col checkout-col__100">
+                                <div className="input-block">
                                     <label for="o-2">Shipping Address</label>
-                                    <div class="input-block__wrap">
+                                    <div className="input-block__wrap">
                                         <input id="o-2" type="text" name="text" placeholder="Shipping address">
-                                        <i class="hb-ico locate-ico"></i>
+                                        <i className="hb-ico locate-ico"></i>
                                     </div>
                                 </div>
                             </div><!-- col -->
-                            <div class="checkout-col">
-                                <div class="input-block">
+                            <div className="checkout-col">
+                                <div className="input-block">
                                     <label for="o-3">Shipping city</label>
                                     <input id="o-3" type="text" name="text" placeholder="City">
                                 </div>
                             </div><!-- col -->
-                            <div class="checkout-col checkout-col__25">
-                                <div class="input-block">
+                            <div className="checkout-col checkout-col__25">
+                                <div className="input-block">
                                     <label for="o-4">Shipping state</label>
                                     <select name="text" id="o-4">
                                         <option value="">State/Province</option>
@@ -157,8 +157,8 @@
                                     </select>
                                 </div>
                             </div><!-- col -->
-                            <div class="checkout-col checkout-col__25">
-                                <div class="input-block">
+                            <div className="checkout-col checkout-col__25">
+                                <div className="input-block">
                                     <label for="o-5">Shipping Zip</label>
                                     <select name="text" id="o-5">
                                         <option value="">ZIP</option>
@@ -168,25 +168,25 @@
                             </div><!-- col -->
                         </div>
                     </div>
-                    <div class="checkout-button">
-                        <a href="checkout.html" class="primary-btn">next</a>
+                    <div className="checkout-button">
+                        <a href="checkout.html" className="primary-btn">next</a>
                     </div>
                 </div>
-                <div class="checkout-sidebar">
-                    <h2 class="checkout-title">order summary</h2>
-                    <div class="checkout-main">
-                        <div class="checkout-main__img"><img src="img/checkout/img-3-min.png" alt=""></div>
-                        <div class="checkout-main__info">
-                            <span class="checkout-main__title">Buzz Fit Box Service</span>
+                <div className="checkout-sidebar">
+                    <h2 className="checkout-title">order summary</h2>
+                    <div className="checkout-main">
+                        <div className="checkout-main__img"><img src="img/checkout/img-3-min.png" alt=""/></div>
+                        <div className="checkout-main__info">
+                            <span className="checkout-main__title">Buzz Fit Box Service</span>
                             <p>Refundable deposit</p>
                             <p>$199.00 USD</p>
-                            <div class="checkout-main__row">
+                            <div className="checkout-main__row">
                                 <select name="text">
                                     <option value="">Qty: 1</option>
                                     <option value="">Qty: 1</option>
                                     <option value="">Qty: 1</option>
                                 </select>
-                                <a href="#" class="primary-btn primary-btn-yellow">update</a>
+                                <a href="#" className="primary-btn primary-btn-yellow">update</a>
                             </div>
                         </div>
                     </div>
@@ -200,13 +200,13 @@
                             Included
                         </li>
                     </ul>
-                    <div class="checkout-total">
+                    <div className="checkout-total">
                         <span>Total</span>
                         <b>$199.00 USD</b>
                     </div>
-                    <div class="checkout-logos">
-                        <div class="checkout-logo"><img src="img/checkout/img-1-min.png" alt=""></div>
-                        <div class="checkout-logo"><img src="img/checkout/img-2-min.png" alt=""></div>
+                    <div className="checkout-logos">
+                        <div className="checkout-logo"><img src="img/checkout/img-1-min.png" alt=""/></div>
+                        <div className="checkout-logo"><img src="img/checkout/img-2-min.png" alt=""/></div>
                     </div>
                 </div>
             </div>
@@ -215,20 +215,20 @@
 </section>
 <!-- end checkout -->
 <!-- start footer -->
-<footer class="footer">
-    <div class="wrapper">
-        <div class="arrow-up"><i class="hb-ico arrow-up-ico"></i></div>
-        <div class="footer-row">
-            <div class="footer-col footer-col__1">
-                <div class="footer-logo"><a href="/"><img src="img/logo-2.svg" alt=""></a></div>
-                <ul class="social">
-                    <li><a href="/"><img src="img/social/inst.svg" alt=""></a></li>
-                    <li><a href="/"><img src="img/social/twit.svg" alt=""></a></li>
+<footer className="footer">
+    <div className="wrapper">
+        <div className="arrow-up"><i className="hb-ico arrow-up-ico"></i></div>
+        <div className="footer-row">
+            <div className="footer-col footer-col__1">
+                <div className="footer-logo"><a href="/"><img src="img/logo-2.svg" alt=""/></a></div>
+                <ul className="social">
+                    <li><a href="/"><img src="img/social/inst.svg" alt=""/></a></li>
+                    <li><a href="/"><img src="img/social/twit.svg" alt=""/></a></li>
                 </ul>
                 <p>Copyright © 2021 Buzz Fit</p>
             </div>
-            <div class="footer-col footer-col__2">
-                <span class="footer-subtitle">Company</span>
+            <div className="footer-col footer-col__2">
+                <span className="footer-subtitle">Company</span>
                 <ul>
                     <li><a href="about.html">About us</a></li>
                     <li><a href="how.html">How it works</a></li>
@@ -236,8 +236,8 @@
                     <li><a href="order.html">Buy now</a></li>
                 </ul>
             </div>
-            <div class="footer-col footer-col__3">
-                <span class="footer-subtitle">Support</span>
+            <div className="footer-col footer-col__3">
+                <span className="footer-subtitle">Support</span>
                 <ul>
                     <li><a href="faq.html">FAQ</a></li>
                     <li><a href="contact.html">Contact us</a></li>
@@ -248,8 +248,8 @@
                     <li><a href="refund.html">Refund policy</a></li>
                 </ul>
             </div>
-            <div class="footer-col footer-col__4">
-                <span class="footer-subtitle">Community</span>
+            <div className="footer-col footer-col__4">
+                <span className="footer-subtitle">Community</span>
                 <ul>
                     <li><a href="/">Blog</a></li>
                     <li><a href="/">Advertise with us</a></li>

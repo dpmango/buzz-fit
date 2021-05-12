@@ -7,6 +7,7 @@ export default {
   },
   STATIC: {
     ABOUT: '/about',
+    BILLING: '/billing',
   },
   ADMIN: {
     ROOT: '/admin',

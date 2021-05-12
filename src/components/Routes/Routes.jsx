@@ -11,6 +11,7 @@ import NoMatch from './NoMatch';
 import Home from './Home';
 import Auth from './Auth';
 import About from './About';
+import Billing from './Billing';
 
 const Routes = observer(() => {
   const location = useRouteMatch(routes.ADMIN.ROOT);
@@ -25,6 +26,10 @@ const Routes = observer(() => {
 
         <Route path={routes.STATIC.ABOUT}>
           <About />
+        </Route>
+
+        <Route path={routes.STATIC.BILLING}>
+          <Billing />
         </Route>
 
         {/* <ProtectedRoute exact path={routes.PREORDERS}>

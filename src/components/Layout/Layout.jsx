@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cns from 'classnames';
 
 import Header from '@components/Layout/Header';
-import Footer from '@components/Layout/Header';
+import Footer from '@components/Layout/Footer';
 
 const Variants = {
   MAIN: 'main',
