@@ -1,0 +1,96 @@
+@import "vars"
+
+.terms
+	.pageTop
+		margin-top: 143px
+		background: #EFF8FA
+	.page-title
+		padding-right: 350px
+	&-content
+		padding: 119px 0 40px
+		p, ul li
+			line-height: 1.75
+			color: #515151
+		p
+			padding-bottom: 26px
+		ul
+			li
+				padding-left: 21px
+				position: relative
+				margin-bottom: 25px
+				&::after
+					content: ''
+					position: absolute
+					top: 9px
+					left: 0
+					width: 10px
+					height: 17px
+					background: url(../img/icons/list-ico.svg) no-repeat center
+					background-size: contain
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		padding-bottom: 52px
+	&-title
+		display: block
+		min-width: 400px
+		width: 400px
+		padding-right: 100px
+		font: bold 1.8rem/1.2 $MriyaGrotesk
+		letter-spacing: -0.025em
+		text-transform: capitalize
+		color: #292930
+
+@media only screen and (max-width : 1160px)
+	.terms
+		.page-title
+			padding-right: 320px
+		.pageTop
+			&-img
+				right: -400px
+
+@media only screen and (max-width : 960px)
+	.terms
+		&-content
+			padding: 80px 0 50px
+		&-title
+			min-width: 300px
+			width: 300px
+			padding-right: 30px
+
+@media only screen and (max-width : 767px)
+	.terms
+		.page-title
+			padding-right: 0
+			max-width: 300px
+		.pageTop
+			padding: 64px 0
+			margin-top: 105px
+			&-img
+				height: 177px
+				right: -112px
+		&-content
+			padding: 40px 0 30px
+			p, ul li
+				line-height: 1.45
+			p
+				padding-bottom: 22px
+			ul
+				li
+					margin-bottom: 22px
+					&::after
+						top: 6px
+		&-row
+			display: block
+			padding-bottom: 12px
+		&-title
+			min-width: auto
+			width: 100%
+			margin: 0 0 15px
+			font-size: 1.45rem
+
+@media only screen and (max-width : 600px)
+	.terms
+		.pageTop
+			&-img
+				right: -210px
