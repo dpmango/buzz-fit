@@ -4,12 +4,12 @@ import Homepage from '@components/Homepage';
 
 const HomePage = () => {
   return (
-    <div className="container">
+    <>
       <Homepage />
       <Helmet>
-        <title>Главная</title>
+        <title>Buzz Fit :: Главная</title>
       </Helmet>
-    </div>
+    </>
   );
 };
 

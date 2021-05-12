@@ -1,4 +1,3 @@
-export const baseTitle = 'Buzz Fit';
 export const sliderSettingsOne = {
   dots: false,
   infinite: true,

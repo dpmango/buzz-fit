@@ -3,10 +3,9 @@ import React from 'react';
 import Slider from 'react-slick';
 import Select from 'react-select';
 import { Link } from 'react-router-dom';
-import { baseTitle, sliderSettingsOne, sliderSettingsThree } from './Helper';
+import { sliderSettingsOne, sliderSettingsThree } from './Helper';
 
 export default function Homepage() {
-  document.title = baseTitle + ' - Homepage';
   const options = [
     { value: 'Specialty 1', label: 'Specialty 1' },
     { value: 'Specialty 2', label: 'Specialty 2' },

@@ -10,6 +10,7 @@ import ProtectedRoute from './ProtectedRoute';
 import NoMatch from './NoMatch';
 import Home from './Home';
 import Auth from './Auth';
+import About from './About';
 
 const Routes = observer(() => {
   const location = useRouteMatch(routes.ADMIN.ROOT);
@@ -20,6 +21,10 @@ const Routes = observer(() => {
       <Switch>
         <Route exact path={routes.HOME}>
           <Home />
+        </Route>
+
+        <Route path={routes.STATIC.ABOUT}>
+          <About />
         </Route>
 
         {/* <ProtectedRoute exact path={routes.PREORDERS}>
