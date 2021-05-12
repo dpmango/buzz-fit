@@ -1,0 +1,202 @@
+@import "vars"
+
+.about
+	&-block
+		.section-title
+			margin: 0
+		&.about-main
+			padding: 304px 0 114px
+			background: #EFF8FA
+			.section-title
+				max-width: 500px
+			.about
+				&-img
+					margin-left: -85px
+					img,svg
+						max-width: 634px
+		&.about-second
+			padding: 157px 0 125px
+			.about
+				&-img
+					transform: translate(20px,0)
+					img,svg
+						max-width: 605px
+				&-col
+					padding-bottom: 57px
+					&__1
+						padding-top: 77px
+					&__3
+						margin-top: -79px
+	&-row
+		display: flex
+		flex-flow: row wrap
+	&-col
+		width: 50%
+		padding-bottom: 102px
+		&__1,&__3
+			padding-right: 30px
+		&__2,&__4
+			padding-left: 36px
+	&-img
+		img,svg
+			display: block
+	&-subtitle
+		display: block
+		font: bold 1rem/1.75 $OpenSans
+		color: #515151
+	p
+		font: normal 1rem/1.75 $OpenSans
+		color: #515151
+		padding-bottom: 25px
+		&:last-child
+			padding-bottom: 0
+
+.notMiss
+	background: #FCF8ED
+	padding: 167px 0 186px
+	&-wrap
+		position: relative
+	&-info
+		padding: 0 0 82px 553px
+	&-img
+		position: absolute
+		bottom: 187px
+		left: -27px
+		img,svg
+			display: block
+			max-width: 706px
+	.section-title
+		font: 900 1.8rem/1.2 $MriyaGrotesk
+		letter-spacing: -0.025em
+		color: #292930
+		text-transform: capitalize
+		margin-bottom: 30px
+	p
+		font: normal 1rem/1.75 $OpenSans
+	&-form
+		background: #fff
+		border-radius: 40px
+		padding: 52px 226px 55px 71px
+		position: relative
+		box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05)
+		.input-block
+			margin: 0
+		&__row
+			display: flex
+			flex-flow: row wrap
+		&__col
+			width: 33.333%
+			padding-right: 20px
+		.primary-btn
+			position: absolute
+			top: 52px
+			right: 46px
+			padding: 29.5px 50px
+			font: 900 0.9rem/1.1 $MriyaGrotesk
+	&.notMiss-second
+		background: transparent
+
+@media only screen and (max-width : 1160px)
+	.about
+		&-block
+			&.about-main
+				padding: 220px 0 90px
+				.about
+					&-img
+						margin: 0
+						img,svg
+							max-width: 100%
+			&.about-second
+				padding: 80px 0 40px
+				.about
+					&-col
+						&__1
+							padding-top: 0
+						&__3
+							margin: 0
+					&-img
+						margin: 0
+						transform: translate(0,0)
+						img,svg
+							max-width: 100%
+		&-col
+			padding-bottom: 50px
+	.notMiss
+		padding: 80px 0
+
+@media only screen and (max-width : 960px)
+	.about
+		&-subtitle
+			font-size: 0.9rem
+			line-height: 1.45
+		p
+			line-height: 1.45
+	.notMiss
+		&-info
+			padding-left: 350px
+		&-img
+			bottom: 280px
+			img,svg
+				max-width: 500px
+		&-form
+			padding: 50px 35px 30px
+			&__row
+				flex-flow: row wrap
+			&__col
+				width: 50%
+				padding: 0 10px 20px
+			&__btn
+				width: 50%
+				padding: 0 10px 20px
+			.primary-btn
+				position: static
+
+@media only screen and (max-width : 767px)
+	.about
+		&-block
+			&.about-main
+				padding: 169px 0 75px
+				.section-title
+					max-width: 100%
+					font-size: 2.1rem
+				.about
+					&-col
+						padding: 0
+			&.about-second
+				padding: 57px 0 39px
+				.about
+					&-col
+						padding: 0
+		&-row
+			display: block
+		&-col
+			width: 100%
+			padding: 0
+		&-img
+			padding-bottom: 32px
+		.section-title
+			margin-bottom: 32px
+		p
+			padding-bottom: 22px
+			&:last-child
+				padding-bottom: 22px
+	.notMiss
+		padding: 74px 0 80px
+		.section-title
+			font-size: 1.45rem
+			line-height: 1.2
+			margin-bottom: 18px
+		p
+			line-height: 1.45
+		&-info
+			padding: 0
+		&-img
+			margin: -20px -10% 0 0
+			position: static
+			img,svg
+				max-width: 100%
+		&-form
+			padding: 50px 28px 30px
+			margin: 0 -10px
+			&__col,&__btn
+				width: 100%

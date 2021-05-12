@@ -1,0 +1,400 @@
+@import "vars"
+
+.calculator
+	&-main
+		padding: 204px 0 0
+	&-top
+		display: inline-block
+		text-align: center
+	&-list
+		display: flex
+		flex-flow: row nowrap
+		li
+			a
+				display: inline-block
+				min-width: 317px
+				padding: 13px 30px
+				font: normal 1.6rem/1 $MriyaGrotesk
+				letter-spacing: -0.025em
+				text-transform: capitalize
+				color: #292930
+				box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25)
+				background: #D5BE92
+				border-radius: 20px 20px 0 0
+				&.active
+					color: #F9FBFC
+					box-shadow: none
+	&-wrap
+		padding: 40px
+		background-color: #D5BE92
+		border-radius: 0 20px 20px 20px
+		box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25)
+		position: relative
+		z-index: 10
+		#chartdiv
+			height: 400px
+	&-content
+		background-color: #fff
+		padding: 16px 55px 25px
+		border-radius: 20px
+		text-align: center
+	&-title
+		display: block
+		font: normal 1.5rem/1.5 $MriyaGrotesk
+		letter-spacing: -0.025em
+		text-transform: uppercase
+		color: #5A3939
+		margin: 0 0 21px
+	&-row
+		display: flex
+		flex-flow: row nowrap
+		padding-bottom: 37px
+		border-bottom: 1px solid #C4C4C4
+	&-col
+		display: flex
+		flex-flow: row wrap
+		align-items: center
+		justify-content: center
+		width: 25%
+		min-height: 384px
+		padding: 0 15px
+		border-right: 1px solid #C4C4C4
+		text-align: center
+		&:last-child
+			border: none
+		ul
+			li
+				font: normal 0.8rem/1 $MriyaGrotesk
+				letter-spacing: -0.025em
+				text-transform: uppercase
+				color: #515151
+				padding-bottom: 10px
+	&-descr,&-img
+		width: 100%
+		height: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+	&-img
+		img,svg
+			display: block
+			max-width: 166px
+			max-height: 120px
+			margin: 0 auto
+	&-sub
+		display: block
+		font: normal 1.15rem/1.45 $MriyaGrotesk
+		letter-spacing: -0.025em
+		text-transform: uppercase
+		color: #515151
+		margin: 0 0 8px
+	&-tit
+		display: block
+		font: normal 1.6rem/1 $MriyaGrotesk
+		letter-spacing: -0.025em
+		text-transform: capitalize
+		color: #515151
+		margin: 0 0 11px
+	&-bottom
+		display: flex
+		flex-flow: row nowrap
+		text-align: right
+		padding: 46px 0 0
+		font: normal 1.5rem/1.5 $MriyaGrotesk
+		letter-spacing: -0.025em
+		text-transform: uppercase
+		color: #5A3939
+		span
+			display: inline-block
+			padding-top: 22px
+			white-space: nowrap
+			border-top: 1px solid #C4C4C4
+			margin-top: 14px
+		&__info
+			padding-right: 50px
+	&-basis
+		background-color: #F6F8F9
+		background-repeat: repeat
+		background-position: 0 0
+		background-image: url(../img/testimonials/bg.svg)
+		margin-top: -150px
+		padding: 355px 0 209px
+		position: relative
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 307px
+			box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1)
+			border-top: 6px solid #fff
+			background-color: #F6F8F9
+		&__top
+			display: flex
+			justify-content: flex-end
+			padding-left: 620px
+			position: relative
+			img,svg
+				display: block
+				max-width: 544px
+				position: absolute
+				bottom: 0
+				left: 11px
+		&__info
+			min-height: 577px
+			max-width: 575px
+			width: 100%
+			.section-title
+				margin-bottom: 43px
+			p
+				line-height: 1.75
+				color: #515151
+		&__subtitle
+			display: block
+			font-size: 1.3rem
+			line-height: 1.6
+			color: #515151
+			margin: 0 0 46px
+		&__wrapper
+			max-width: 1500px
+		&__wrap
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			min-height: 223px
+			padding: 75px 500px 75px 105px
+			background: #fff
+			box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1)
+			border-radius: 40px
+			position: relative
+			z-index: 10
+			&-img
+				position: absolute
+				bottom: -31px
+				right: 96px
+				img,svg
+					display: block
+					max-width: 384px
+				.primary-btn
+					position: absolute
+					top: 54%
+					left: 50%
+					transform: translate(-50%,-40%)
+					padding: 23px 51px
+		&__ico
+			display: block
+			min-width: 70px
+			max-width: 70px
+			margin-right: 132px
+			img,svg
+				display: block
+		&__title
+			display: block
+			font: 900 1.8rem/1.2 $MriyaGrotesk
+			letter-spacing: -0.025em
+			text-transform: capitalize
+			color: #292930
+
+.calculatorFaq
+	padding: 143px 0 80px
+	&-top
+		text-align: center
+		padding-bottom: 35px
+	&-ico
+		display: block
+		margin-bottom: 26px
+		img,svg
+			display: block
+			max-width: 180px
+			margin: 0 auto
+	.accordeon
+		padding-bottom: 43px
+		margin-bottom: 27px
+		&-top
+			padding: 42px 50px 42px 0
+			&::after
+				top: 40px
+		&-title
+			text-transform: uppercase
+		&-block
+			ul
+				li
+					padding-left: 52px
+					margin-bottom: 25px
+					line-height: 1.75
+					color: #7C808A
+					position: relative
+					&::after
+						content: ''
+						position: absolute
+						top: 2px
+						left: 0
+						width: 41px
+						height: 31px
+						background: url(../img/calculator/list-ico.svg) no-repeat center
+						background-size: contain
+		&.accordeon-active
+			.accordeon
+				&-title
+					color: #A9BB55
+				&-top
+					&::after
+						background: url(../img/icons/accordeon-white.svg) #A9BB55 no-repeat center
+						border-color: #A9BB55
+
+@media only screen and (max-width : 1250px)
+	.calculator
+		&-basis
+			&__top
+				img,svg
+					left: 35px
+
+@media only screen and (max-width : 1160px)
+	.calculator
+		&-title
+			display: none
+		&-row
+			display: block
+		&-col
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			width: 100%
+			min-height: auto
+			padding: 50px 0
+			border: none
+			border-bottom: 1px solid #C4C4C4
+		&-main
+			padding-bottom: 80px
+		&-basis
+			margin: 0
+			padding-top: 100px
+			&__top
+				padding-left: 470px
+				img,svg
+					max-width: 420px
+			&__wrap
+				flex-flow: row wrap
+				text-align: center
+				padding: 40px 20px 186px
+				&-img
+					bottom: -40px
+					right: auto
+					left: 50%
+					transform: translate(-50%,0)
+					img,svg
+						max-width: 270px
+					.primary-btn
+						padding: 23px 40px
+			&__title
+				width: 100%
+				margin: 0
+				order: -1
+				font-size: 1.45rem
+			&__ico
+				margin: 27px auto 0
+
+@media only screen and (max-width : 960px)
+	.calculator
+		&-basis
+			padding: 72px 0 107px
+			&__top
+				padding-left: 350px
+				img,svg
+					max-width: 300px
+	.calculatorFaq
+		padding: 80px 0 60px
+
+@media only screen and (max-width : 767px)
+	.calculator
+		&-main
+			padding: 117px 0 80px
+		&-list
+			li
+				a
+					min-width: auto
+					font-size: 1.1rem
+					padding: 18px 19px
+		&-wrap
+			padding: 30px 10px 10px
+		&-content
+			padding: 0 20px
+		&-row
+			padding: 0
+		&-col
+			padding: 35px 0
+			&:last-child
+				display: block
+		&-bottom
+			display: block
+			text-align: center
+			padding: 45px 0
+			&__info
+				padding: 0
+				font-size: 1.4rem
+				line-height: 1.1
+			&__btn
+				padding-top: 45px
+		&-basis
+			margin: 0
+			&__top
+				padding: 0 0 313px
+				img,svg
+					max-width: 225px
+			&__info
+				min-height: auto
+				max-width: 100%
+				.section-title
+					margin-bottom: 33px
+				p
+					line-height: 1.45
+			&__subtitle
+				font-size: 1.1rem
+				line-height: 1.5
+				margin-bottom: 25px
+	.calculatorFaq
+		&-top
+			padding-bottom: 44px
+			.section-title
+				margin: 0
+		&-ico
+			margin-bottom: 30px
+			img,svg
+				max-width: 90px
+		.accordeon
+			padding: 0
+			margin: 0
+			&-top
+				padding: 28px 40px 28px 0
+				&::after
+					top: 50%
+					width: 38px
+					height: 38px
+			&-title
+				font-size: 1.25rem
+			&-block
+				padding: 11px 0 20px
+				ul
+					li
+						padding-left: 50px
+						line-height: 1.45
+						&::after
+							top: -1px
+
+@media only screen and (max-width : 600px)
+	.calculator
+		&-tit
+			font-size: 1.4rem
+		&-img
+			img,svg
+				max-width: 120px
+				max-height: 120px
+
+
+@media only screen and (max-width : 370px)
+	.calculator
+		&-list
+			li
+				a
+					font-size: 1rem

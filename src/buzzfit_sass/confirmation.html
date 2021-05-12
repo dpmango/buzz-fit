@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Buzz Fit - Confirmation</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!--<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
+	<link rel="stylesheet" href="css/main.min.css">
+	<meta name="theme-color" content="#000">
+	<meta name="msapplication-navbutton-color" content="#000">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+</head>
+<body>
+	<!-- start confirmation -->
+	<section class="confirmation">
+		<div class="wrapper">
+			<div class="confirmation-wrap">
+				<div class="confirmation-logo"><a href="#"><img src="img/logo-2.svg" alt=""></a></div>
+				<h1 class="confirmation-title">Thank you for your order</h1>
+				<div class="confirmation-img"><img src="img/confirmation/img-min.png" alt=""></div>
+				<ul>
+					<li>Hi {{first_name}},
+					<li>Your order {{order_number}} has been processed. The below details allow you access to your physician application</li>
+					<li>Your invoice, shipment tracking, installation details are all available within the app.</li>
+					<li>Using the below details please sign in to verify and activate your account.</li>
+					<li>Username: {{user_name}} <br>Password: {{user_pass}}</li>
+				</ul>
+				<div class="confirmation-button">
+				  <a href="#" class="primary-btn">Verify and sign in now</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end confirmation -->
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script defer src="js/scripts.min.js"></script>
+</body>
+</html>
