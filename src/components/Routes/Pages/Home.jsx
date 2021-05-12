@@ -7,7 +7,7 @@ const HomePage = () => {
     <>
       <Homepage />
       <Helmet>
-        <title>Buzz Fit :: Главная</title>
+        <title>Buzz Fit - Главная</title>
       </Helmet>
     </>
   );

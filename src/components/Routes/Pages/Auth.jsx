@@ -7,7 +7,7 @@ const AuthPage = () => {
     <div className="container">
       <Auth />
       <Helmet>
-        <title>Авторизация</title>
+        <title>Buzz Fit - Auth</title>
       </Helmet>
     </div>
   );

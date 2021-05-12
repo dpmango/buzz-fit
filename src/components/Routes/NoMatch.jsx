@@ -6,7 +6,7 @@ const NoMatchPage = () => {
     <div className="container">
       <div className="h1-title">Page not found (404)</div>
       <Helmet>
-        <title>Не найдено</title>
+        <title>Buzz Fit - Not found</title>
       </Helmet>
     </div>
   );

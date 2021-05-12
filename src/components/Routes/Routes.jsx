@@ -8,10 +8,10 @@ import { AuthStoreContext } from '@store/AuthStore';
 
 import ProtectedRoute from './ProtectedRoute';
 import NoMatch from './NoMatch';
-import Home from './Home';
-import Auth from './Auth';
-import About from './About';
-import Billing from './Billing';
+import StaticRouter from './StaticRouter';
+import Home from './Pages/Home';
+import Auth from './Pages/Auth';
+import Order from './Pages/Order';
 
 const Routes = observer(() => {
   const location = useRouteMatch(routes.ADMIN.ROOT);
@@ -24,16 +24,16 @@ const Routes = observer(() => {
           <Home />
         </Route>
 
-        <Route path={routes.STATIC.ABOUT}>
-          <About />
+        <Route path={routes.ORDER.ROOT}>
+          <Order />
         </Route>
 
-        <Route path={routes.STATIC.BILLING}>
-          <Billing />
+        <Route path={routes.STATIC.ORDER}>
+          <StaticRouter />
         </Route>
 
-        {/* <ProtectedRoute exact path={routes.PREORDERS}>
-          <Preorders />
+        {/* <ProtectedRoute exact path={routes.PERSONAL}>
+          <PERSONAL />
         </ProtectedRoute> */}
 
         <Route path={routes.AUTH.LOGIN}>{isAuthenticated ? <Redirect to={routes.HOME} /> : <Auth />}</Route>

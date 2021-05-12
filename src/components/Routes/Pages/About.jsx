@@ -10,7 +10,7 @@ const AboutPage = () => {
       <About />
       <NotMiss />
       <Helmet>
-        <title>О нас</title>
+        <title>Buzz Fit - About</title>
       </Helmet>
     </>
   );

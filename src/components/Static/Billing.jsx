@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import cns from 'classnames';
 
-// import SignupForm from '@components/Forms/Signup';
+import { TermsContent, PageTop } from '@components/Static/particles';
 
 const Billing = ({ ...props }) => {
   const content = useMemo(() => {
@@ -168,7 +168,7 @@ const Billing = ({ ...props }) => {
           ),
         },
         {
-          id: 10,
+          id: 11,
           title: 'Free Trials',
           content: (
             <>
@@ -186,24 +186,9 @@ const Billing = ({ ...props }) => {
 
   return (
     <section className="terms">
-      <div className="pageTop" style={{ backgroundImage: 'img/testimonials/bg.svg' }}>
-        <div className="wrapper">
-          <h1 className="page-title">{content.title}</h1>
-        </div>
-        <div className="pageTop-img">
-          <img src={content.image} alt="" />
-        </div>
-      </div>
-      <div className="terms-content">
-        <div className="wrapper">
-          {content.rows.map((row) => (
-            <div className="terms-row" key={row.id}>
-              <h2 className="terms-title">{row.title}</h2>
-              <div className="terms-info">{row.content}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <PageTop title={content.title} image={content.image} />
+
+      <TermsContent rows={content.rows} />
     </section>
   );
 };

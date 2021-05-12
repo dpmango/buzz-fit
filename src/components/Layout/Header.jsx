@@ -7,7 +7,7 @@ export default function Header() {
       <div className="wrapper">
         <div className="header-logo">
           <Link to="/">
-            <img src="img/logo-2.svg" alt="" />
+            <img src="/img/logo-2.svg" alt="" />
           </Link>
         </div>
         <div className="header-row">

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import routes from '@config/routes';
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -12,18 +14,18 @@ export default function Footer() {
           <div className="footer-col footer-col__1">
             <div className="footer-logo">
               <Link to="/">
-                <img src="img/logo-2.svg" alt="" />
+                <img src="/img/logo-2.svg" alt="" />
               </Link>
             </div>
             <ul className="social">
               <li>
                 <Link to="/">
-                  <img src="img/social/inst.svg" alt="" />
+                  <img src="/img/social/inst.svg" alt="" />
                 </Link>
               </li>
               <li>
                 <Link to="/">
-                  <img src="img/social/twit.svg" alt="" />
+                  <img src="/img/social/twit.svg" alt="" />
                 </Link>
               </li>
             </ul>
@@ -33,7 +35,7 @@ export default function Footer() {
             <span className="footer-subtitle">Company</span>
             <ul>
               <li>
-                <Link to="/about">About us</Link>
+                <Link to={routes.STATIC.ABOUT}>About us</Link>
               </li>
               <li>
                 <Link to="/how">How it works</Link>
@@ -53,22 +55,22 @@ export default function Footer() {
                 <Link to="/faq">FAQ</Link>
               </li>
               <li>
-                <Link to="/contact">Contact us</Link>
+                <Link to={routes.STATIC.CONTACT}>Contact us</Link>
               </li>
               <li>
-                <Link to="/terms">Terms & conditions</Link>
+                <Link to={routes.STATIC.TERMS}>Terms & conditions</Link>
               </li>
               <li>
-                <Link to="/privacy">Privacy policy</Link>
+                <Link to={routes.STATIC.PRIVACY}>Privacy policy</Link>
               </li>
               <li>
-                <Link to="/billing">Billing policy</Link>
+                <Link to={routes.STATIC.BILLING}>Billing policy</Link>
               </li>
               <li>
-                <Link to="/delivery">Delivery policy</Link>
+                <Link to={routes.STATIC.DELIVERY}>Delivery policy</Link>
               </li>
               <li>
-                <Link to="/refund">Refund policy</Link>
+                <Link to={routes.STATIC.REFUND}>Refund policy</Link>
               </li>
             </ul>
           </div>

@@ -27,7 +27,7 @@ export default function Homepage() {
               </Link>
             </div>
             <div className="main-img">
-              <img src="img/main/hero.png" alt="" />
+              <img src="/img/main/hero.png" alt="" />
             </div>
           </div>
         </section>
@@ -36,7 +36,7 @@ export default function Homepage() {
             <div className="wrapper">
               <div className="info-top">
                 <h2 className="section-title">Waiting Time is Wasted Time</h2>
-                <img src="img/info/img-1-min.png" alt="" />
+                <img src="/img/info/img-1-min.png" alt="" />
               </div>
               <div className="info-row">
                 <div className="info-col">
@@ -76,7 +76,7 @@ export default function Homepage() {
             <div className="wrapper">
               <div className="info-top">
                 <h2 className="section-title">Let's change that.</h2>
-                <img src="img/info/img-2-min.png" alt="" />
+                <img src="/img/info/img-2-min.png" alt="" />
               </div>
               <div className="info-row">
                 <div className="info-col">
@@ -103,7 +103,7 @@ export default function Homepage() {
             <div className="wrapper">
               <div className="info-row">
                 <div className="info-col">
-                  <img src="img/info/img-3-min.png" alt="" />
+                  <img src="/img/info/img-3-min.png" alt="" />
                 </div>
                 <div className="info-col">
                   <h2 className="section-title">Increase Patients Satisfaction</h2>
@@ -144,7 +144,7 @@ export default function Homepage() {
                   </div>
                 </div>
                 <div className="info-col info-col__img">
-                  <img src="img/info/img-4-min.png" alt="" />
+                  <img src="/img/info/img-4-min.png" alt="" />
                 </div>
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function Homepage() {
             <div className="wrapper">
               <div className="info-row">
                 <div className="info-col info-col__1">
-                  <img src="img/info/img-5-min.png" alt="" />
+                  <img src="/img/info/img-5-min.png" alt="" />
                 </div>
                 <div className="info-col info-col__2">
                   <h2 className="section-title">Request for Service</h2>
@@ -178,10 +178,10 @@ export default function Homepage() {
           </div>
           <div className="info-block info-6">
             <div className="info-bg info-bg__1">
-              <img src="img/info/img-6-1-min.png" alt="" />
+              <img src="/img/info/img-6-1-min.png" alt="" />
             </div>
             <div className="info-bg info-bg__2">
-              <img src="img/info/img-6-2-min.png" alt="" />
+              <img src="/img/info/img-6-2-min.png" alt="" />
             </div>
             <div className="wrapper">
               <div className="info-row">
@@ -242,7 +242,7 @@ export default function Homepage() {
                         <span>- Don McLean</span>
                       </div>
                       <div className="testimonials-human">
-                        <img src="img/testimonials/user-1-min.png" alt="" />
+                        <img src="/img/testimonials/user-1-min.png" alt="" />
                       </div>
                       <span className="testimonials-position">American singer-songwriter</span>
                     </div>
@@ -255,7 +255,7 @@ export default function Homepage() {
                         <span>- Don McLean</span>
                       </div>
                       <div className="testimonials-human">
-                        <img src="img/testimonials/user-1-min.png" alt="" />
+                        <img src="/img/testimonials/user-1-min.png" alt="" />
                       </div>
                       <span className="testimonials-position">American singer-songwriter</span>
                     </div>
@@ -268,7 +268,7 @@ export default function Homepage() {
                         <span>- Don McLean</span>
                       </div>
                       <div className="testimonials-human">
-                        <img src="img/testimonials/user-1-min.png" alt="" />
+                        <img src="/img/testimonials/user-1-min.png" alt="" />
                       </div>
                       <span className="testimonials-position">American singer-songwriter</span>
                     </div>
@@ -298,7 +298,7 @@ export default function Homepage() {
                   <div className="steps-wrap">
                     <div className="steps-img">
                       <div className="steps-img__wrap">
-                        <img src="img/01c.gif" alt="" />
+                        <img src="/img/01c.gif" alt="" />
                       </div>
                     </div>
                     <h3 className="steps-title">Subscribe</h3>
@@ -312,7 +312,7 @@ export default function Homepage() {
                   <div className="steps-wrap">
                     <div className="steps-img">
                       <div className="steps-img__wrap">
-                        <img src="img/03c.gif" alt="" />
+                        <img src="/img/03c.gif" alt="" />
                       </div>
                     </div>
                     <h3 className="steps-title">Receive</h3>
@@ -326,7 +326,7 @@ export default function Homepage() {
                   <div className="steps-wrap">
                     <div className="steps-img">
                       <div className="steps-img__wrap">
-                        <img src="img/02c.gif" alt="" />
+                        <img src="/img/02c.gif" alt="" />
                       </div>
                     </div>
                     <h3 className="steps-title">Enjoy</h3>
@@ -346,7 +346,7 @@ export default function Homepage() {
           <div className="wrapper">
             <div className="begin-row">
               <div className="begin-img">
-                <img src="img/begin/juggling-2-min.png" alt="" />
+                <img src="/img/begin/juggling-2-min.png" alt="" />
               </div>
               <div className="begin-info">
                 <h2 className="section-title">Being a doctor today is tough!</h2>
@@ -451,7 +451,7 @@ export default function Homepage() {
               </div>
               <div className="pricing-col pricing-col__2">
                 <div className="pricing-item pricing-item__1">
-                  <img src="img/logo-mob.svg" alt="" />
+                  <img src="/img/logo-mob.svg" alt="" />
                 </div>
                 <div className="pricing-item pricing-item__2">refundable deposit</div>
                 <div className="pricing-item pricing-item__3">
@@ -484,7 +484,7 @@ export default function Homepage() {
               </div>
               <div className="pricing-col pricing-col__3">
                 <div className="pricing-item pricing-item__1">
-                  <img src="img/pricing/logo-2-min.png" alt="" />
+                  <img src="/img/pricing/logo-2-min.png" alt="" />
                 </div>
                 <div className="pricing-item pricing-item__2">$299.00</div>
                 <div className="pricing-item pricing-item__3">$99.00</div>
@@ -502,7 +502,7 @@ export default function Homepage() {
               </div>
               <div className="pricing-col pricing-col__4">
                 <div className="pricing-item pricing-item__1">
-                  <img src="img/pricing/logo-3-min.png" alt="" />
+                  <img src="/img/pricing/logo-3-min.png" alt="" />
                 </div>
                 <div className="pricing-item pricing-item__2">$Unknown</div>
                 <div className="pricing-item pricing-item__3">
@@ -532,7 +532,7 @@ export default function Homepage() {
               </div>
               <div className="pricing-col pricing-col__5">
                 <div className="pricing-item pricing-item__1">
-                  <img src="img/pricing/logo-4-min.png" alt="" />
+                  <img src="/img/pricing/logo-4-min.png" alt="" />
                 </div>
                 <div className="pricing-item pricing-item__2">
                   $10.00
@@ -583,7 +583,7 @@ export default function Homepage() {
                 <span className="section-subtitle">Your savings</span>
                 <h2 className="section-title">Calculate your potential operational savings</h2>
                 <div className="calculate-img">
-                  <img src="img/main/think.png" alt="" />
+                  <img src="/img/main/think.png" alt="" />
                 </div>
               </div>
               <div className="calculate-col calculate-col__2">
@@ -648,7 +648,7 @@ export default function Homepage() {
                       organization, so collaboration is easy.”
                     </p>
                   </div>
-                  <img className="industry-logo" src="img/industry/img-1.svg" alt="" />
+                  <img className="industry-logo" src="/img/industry/img-1.svg" alt="" />
                 </div>
                 <div className="industry-slide">
                   <div className="industry-wrap">
@@ -657,7 +657,7 @@ export default function Homepage() {
                       organization, so collaboration is easy.”
                     </p>
                   </div>
-                  <img className="industry-logo" src="img/industry/img-2.svg" alt="" />
+                  <img className="industry-logo" src="/img/industry/img-2.svg" alt="" />
                 </div>
                 <div className="industry-slide">
                   <div className="industry-wrap">
@@ -666,7 +666,7 @@ export default function Homepage() {
                       organization, so collaboration is easy.”
                     </p>
                   </div>
-                  <img className="industry-logo" src="img/industry/img-3.svg" alt="" />
+                  <img className="industry-logo" src="/img/industry/img-3.svg" alt="" />
                 </div>
                 <div className="industry-slide">
                   <div className="industry-wrap">
@@ -675,7 +675,7 @@ export default function Homepage() {
                       organization, so collaboration is easy.”
                     </p>
                   </div>
-                  <img className="industry-logo" src="img/industry/img-1.svg" alt="" />
+                  <img className="industry-logo" src="/img/industry/img-1.svg" alt="" />
                 </div>
               </Slider>
             </div>
@@ -692,7 +692,7 @@ export default function Homepage() {
               </p>
             </div>
             <div className="result-img">
-              <img src="img/result/wallet.png" alt="" />
+              <img src="/img/result/wallet.png" alt="" />
             </div>
             <div className="result-bar">
               <span className="result-bar__num result-bar__num-1">0%</span>
@@ -733,7 +733,7 @@ export default function Homepage() {
         <section className="guarantee">
           <div className="wrapper">
             <div className="guarantee-ico">
-              <img src="img/icons/shield-ico.svg" alt="" />
+              <img src="/img/icons/shield-ico.svg" alt="" />
             </div>
             <span className="section-subtitle">What People Say</span>
             <h2 className="section-title">100% Risk Free!</h2>
@@ -760,7 +760,7 @@ export default function Homepage() {
                   <div className="steps-wrap">
                     <div className="steps-img">
                       <div className="steps-img__wrap">
-                        <img src="img/01c.gif" alt="" />
+                        <img src="/img/01c.gif" alt="" />
                       </div>
                     </div>
                     <h3 className="steps-title">Subscribe</h3>
@@ -774,7 +774,7 @@ export default function Homepage() {
                   <div className="steps-wrap">
                     <div className="steps-img">
                       <div className="steps-img__wrap">
-                        <img src="img/03c.gif" alt="" />
+                        <img src="/img/03c.gif" alt="" />
                       </div>
                     </div>
                     <h3 className="steps-title">Receive</h3>
@@ -788,7 +788,7 @@ export default function Homepage() {
                   <div className="steps-wrap">
                     <div className="steps-img">
                       <div className="steps-img__wrap">
-                        <img src="img/02c.gif" alt="" />
+                        <img src="/img/02c.gif" alt="" />
                       </div>
                     </div>
                     <h3 className="steps-title">Enjoy</h3>
