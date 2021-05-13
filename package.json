@@ -46,6 +46,7 @@
     "react-scripts": "4.0.3",
     "react-select": "^4.3.0",
     "react-slick": "^0.28.1",
+    "react-slidedown": "^2.4.5",
     "react-spinners": "^0.10.6",
     "retry-axios": "^2.4.0",
     "viewport-units-buggyfill": "^0.6.2",

@@ -87,7 +87,7 @@ const Routes = observer(() => {
           <Refund />
         </Route>
 
-        <Route path={routes.STATIC.REFUND}>
+        <Route path={routes.STATIC.FAQ}>
           <FAQ />
         </Route>
 

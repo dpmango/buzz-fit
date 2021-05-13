@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
+import cns from 'classnames';
 
 import routes from '@config/routes';
 
 const Header = ({ ...props }) => {
+  const [active, setActive] = useState(false);
+
+  const handleBarClick = useCallback(() => {
+    setActive(!active);
+  }, [active, setActive]);
+
   return (
-    <header className="header">
+    <header className={cns('header', active && 'header-active')}>
       <div className="wrapper">
         <div className="header-logo">
           <Link to="/">
@@ -69,7 +76,7 @@ const Header = ({ ...props }) => {
             Get Now
           </Link>
         </div>
-        <div className="header-bar">
+        <div className="header-bar" onClick={handleBarClick}>
           <span />
         </div>
       </div>

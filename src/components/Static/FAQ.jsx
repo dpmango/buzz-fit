@@ -1,10 +1,20 @@
-import React, { useMemo } from 'react';
+import React, { useCallback, useState, useMemo } from 'react';
+import { SlideDown } from 'react-slidedown';
 import cns from 'classnames';
 
 import { TermsContent, PageTop } from '@components/Static/particles';
 import { each } from 'lodash';
 
 const FAQ = ({ ...props }) => {
+  const [accardeon, setAccardeon] = useState(null);
+
+  const handleAccardeonClick = useCallback(
+    (id) => {
+      setAccardeon(id);
+    },
+    [setAccardeon]
+  );
+
   const content = useMemo(() => {
     return {
       title: 'FAQ',
@@ -24,7 +34,7 @@ const FAQ = ({ ...props }) => {
           ),
         },
         {
-          id: 1,
+          id: 2,
           title: 'What is Buzz Fit?',
           content: (
             <>
@@ -37,7 +47,7 @@ const FAQ = ({ ...props }) => {
           ),
         },
         {
-          id: 2,
+          id: 3,
           title: 'What is Buzz Fit?',
           content: (
             <>
@@ -107,11 +117,11 @@ const FAQ = ({ ...props }) => {
       <div className="faq-content">
         <div className="wrapper">
           {content.blocks.map((x) => (
-            <div key={x} className="accordeon">
+            <div key={x} className="accordeon" onClick={() => handleAccardeonClick(x.id)}>
               <div className="accordeon-top">
                 <h3 className="accordeon-title">{x.title}</h3>
               </div>
-              <div className="accordeon-block">{x.content}</div>
+              <SlideDown>{accardeon === x.id ? <div className="accordeon-block">{x.content}</div> : null}</SlideDown>
             </div>
           ))}
         </div>
