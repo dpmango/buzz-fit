@@ -1,5 +1,6 @@
 export default {
   HOME: '/',
+  CALCULATOR: '/calc',
   AUTH: {
     LOGIN: '/auth/login',
     SIGNUP: '/auth/signup',

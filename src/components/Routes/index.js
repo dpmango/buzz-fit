@@ -1,4 +1,5 @@
 export { default as Home } from './Pages/Home';
+export { default as Calculator } from './Pages/Calculator';
 export { default as Auth } from './Pages/Auth';
 export { default as Order } from './Pages/Order';
 

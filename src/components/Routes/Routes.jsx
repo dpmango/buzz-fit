@@ -10,6 +10,7 @@ import ProtectedRoute from './ProtectedRoute';
 import NoMatch from './NoMatch';
 import {
   Home,
+  Calculator,
   Auth,
   Order,
   How,
@@ -34,6 +35,10 @@ const Routes = observer(() => {
       <Switch>
         <Route exact path={routes.HOME}>
           <Home />
+        </Route>
+
+        <Route exact path={routes.CALCULATOR}>
+          <Calculator />
         </Route>
 
         <Route path={routes.ORDER.ROOT}>
@@ -86,9 +91,10 @@ const Routes = observer(() => {
           <FAQ />
         </Route>
 
-        {/* <ProtectedRoute exact path={routes.PERSONAL}>
-          <PERSONAL />
-        </ProtectedRoute> */}
+        {/* auth-based routes */}
+        <ProtectedRoute exact path={routes.ADMIN.ROOT}>
+          <h1>Auth protected route</h1>
+        </ProtectedRoute>
 
         <Route path={routes.AUTH.LOGIN}>{isAuthenticated ? <Redirect to={routes.HOME} /> : <Auth />}</Route>
 
