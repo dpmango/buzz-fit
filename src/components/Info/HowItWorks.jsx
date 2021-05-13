@@ -3,8 +3,10 @@ import { observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import cns from 'classnames';
+import * as am4core from '@amcharts/amcharts4/core';
 
 import { createSlickConfig } from '@helpers';
+import { Chart } from '@ui';
 import routes from '@config/routes';
 
 const HowItWorks = observer(({ ...props }) => {
@@ -21,6 +23,35 @@ const HowItWorks = observer(({ ...props }) => {
     }
   );
 
+  const chartData = useMemo(() => {
+    let data = [
+      {
+        name: 'A',
+        value: 10,
+        title: 'Waiting room\npatients',
+        color: am4core.color('#A4B651'),
+        hint: 'Your patients desperate for a distraction while waiting for service',
+      },
+      {
+        name: 'B',
+        value: 10,
+        title: 'Healthcare\ncontent',
+        color: am4core.color('#D0B78E'),
+        hint: 'We curate and stream the most relevant and best in class health content',
+      },
+      {
+        name: 'C',
+        value: 3,
+        title: 'Patient\nengagement',
+        sets: ['A', 'B'],
+        color: am4core.color('#EEEEEE'),
+        hint: 'Our content engages more of your patients more of the time reducing frustrations while increasing your revenues',
+      },
+    ];
+
+    return data;
+  }, []);
+
   return (
     <section className="howItWorks">
       <div className="howItWorks-main">
@@ -31,7 +62,7 @@ const HowItWorks = observer(({ ...props }) => {
           </div>
           <div className="howItWorks-descr">
             <div className="howItWorks-descr__wrap">
-              <div id="chartdiv"></div>
+              <Chart data={chartData} type="how" />
               <span className="howItWorks-subtitle">Get a deeper understanding</span>
             </div>
           </div>

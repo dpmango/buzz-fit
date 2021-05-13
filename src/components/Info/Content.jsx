@@ -3,9 +3,47 @@ import { observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 import cns from 'classnames';
 
+import { Chart } from '@ui';
 import routes from '@config/routes';
 
 const Content = observer(({ ...props }) => {
+  const chartData = useMemo(() => {
+    let data = [
+      {
+        category: 'News',
+        value: 30,
+        full: 100,
+      },
+      {
+        category: 'Drama',
+        value: 40,
+        full: 100,
+      },
+      {
+        category: 'Sports',
+        value: 30,
+        full: 100,
+      },
+      {
+        category: 'Reality',
+        value: 20,
+        full: 100,
+      },
+      {
+        category: 'Sitcom',
+        value: 15,
+        full: 100,
+      },
+      {
+        category: 'Buzz Fit',
+        value: 100,
+        full: 100,
+      },
+    ];
+
+    return data;
+  }, []);
+
   return (
     <section className="contentPage">
       <div className="contentPage-main">
@@ -22,7 +60,7 @@ const Content = observer(({ ...props }) => {
             </a>
           </div>
           <div className="contentPage-images">
-            <div id="chartdiv"></div>
+            <Chart type="content" data={chartData} />
             <p>Are you ready to cut the cord and plug in a relevant and engaging health content delievery network?</p>
           </div>
         </div>
