@@ -17,7 +17,7 @@ const Device = observer(({ ...props }) => {
             content, to your practice.
           </p>
           <p>We help switch your cost to a profit.</p>
-          <Link href={routes.ORDER.ROOT} className="primary-btn">
+          <Link to={routes.ORDER.ROOT} className="primary-btn">
             Buy now
           </Link>
         </div>

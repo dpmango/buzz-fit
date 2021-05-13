@@ -21,7 +21,7 @@ const Guarantee = observer(({ ...props }) => {
         </p>
         <div className="guarantee-button">
           <div className="guarantee-button__wrap">
-            <Link href={routes.ORDER.ROOT} className="primary-btn primary-btn-peach">
+            <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-peach">
               Get your TV Box Now
             </Link>
           </div>

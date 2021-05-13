@@ -16,7 +16,7 @@ const Hero = observer(({ ...props }) => {
             lead rather than being pushed by the industry.
           </p>
           <p>Once a member, we will give you opportunity to be an innovator, a real leader, a hero in your field!</p>
-          <Link href={routes.ORDER.ROOT} className="primary-btn primary-btn-purple">
+          <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-purple">
             Get yours
           </Link>
         </div>

@@ -20,7 +20,7 @@ const Steps = observer(({ ...props }) => {
               </div>
               <h3 className="steps-title">Subscribe</h3>
               <p>Subscribe - $199 refundable deposit</p>
-              <Link href={routes.ORDER.ROOT} className="primary-btn">
+              <Link to={routes.ORDER.ROOT} className="primary-btn">
                 Get your TV Box Now
               </Link>
             </div>
@@ -34,7 +34,7 @@ const Steps = observer(({ ...props }) => {
               </div>
               <h3 className="steps-title">Receive</h3>
               <p>We’ll send your box within 7 business days</p>
-              <Link href={routes.ORDER.ROOT} className="primary-btn">
+              <Link to={routes.ORDER.ROOT} className="primary-btn">
                 Get your TV Box Now
               </Link>
             </div>
@@ -48,7 +48,7 @@ const Steps = observer(({ ...props }) => {
               </div>
               <h3 className="steps-title">Enjoy</h3>
               <p>You will be up and runnning in 2mins, track your revenue and progress in the physican app.</p>
-              <Link href={routes.ORDER.ROOT} className="primary-btn">
+              <Link to={routes.ORDER.ROOT} className="primary-btn">
                 Get your TV Box Now
               </Link>
             </div>

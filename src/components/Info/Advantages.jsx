@@ -91,7 +91,7 @@ const Advantages = observer(({ ...props }) => {
             </div>
             <div className="advantages-col">
               <div className="advantages-btn">
-                <Link href={routes.ORDER.ROOT} className="primary-btn">
+                <Link to={routes.ORDER.ROOT} className="primary-btn">
                   Get yours
                 </Link>
               </div>

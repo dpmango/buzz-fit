@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import cns from 'classnames';
 
 import routes from '@config/routes';
-import { Checkout, Confirmation } from '@components/Order';
+import { Checkout, Payment, Confirmation, Recepit, Invoice } from '@components/Order';
 
 const Order = observer(({ ...props }) => {
   return (
@@ -13,8 +13,20 @@ const Order = observer(({ ...props }) => {
         <Checkout />
       </Route>
 
-      <Route path={routes.ORDER.CONFIRMATION}>
+      <Route exact path={routes.ORDER.PAYMENT}>
+        <Payment />
+      </Route>
+
+      <Route exact path={routes.ORDER.CONFIRMATION}>
         <Confirmation />
+      </Route>
+
+      <Route exact path={routes.ORDER.RECEPIT}>
+        <Recepit />
+      </Route>
+
+      <Route exact path={routes.ORDER.INVOICE}>
+        <Invoice />
       </Route>
     </Switch>
   );
