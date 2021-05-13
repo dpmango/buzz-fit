@@ -7,7 +7,7 @@ const HowPage = () => {
   return (
     <>
       <HowItWorks />
-      <Steps />
+      <Steps className="steps-green" />
 
       <Helmet>
         <title>Buzz Fit - How it Works</title>

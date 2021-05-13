@@ -5,9 +5,9 @@ import cns from 'classnames';
 
 import routes from '@config/routes';
 
-const Steps = observer(({ ...props }) => {
+const Steps = observer(({ className, ...props }) => {
   return (
-    <section className="steps steps-green">
+    <section className={cns('steps', className)}>
       <div className="wrapper">
         <h2 className="section-title">Success Simplified!</h2>
         <div className="steps-row">
