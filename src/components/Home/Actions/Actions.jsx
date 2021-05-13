@@ -7,6 +7,8 @@ import cns from 'classnames';
 import { createSlickConfig } from '@helpers';
 import routes from '@config/routes';
 
+import content from './data';
+
 const Actions = observer(({ ...props }) => {
   const slickSettings = createSlickConfig(
     {
@@ -39,40 +41,28 @@ const Actions = observer(({ ...props }) => {
     <section className="actions">
       <div className="wrapper">
         <div className="actions-top">
-          <span className="section-subtitle">VIDEOS</span>
-          <h2 className="section-title">Buzz Fit in action</h2>
-          <p>Buzz Fit focuses on delivering simple healthcare messaging</p>
+          <span className="section-subtitle">{content.title}</span>
+          <h2 className="section-title">{content.subtitle}</h2>
+          <p>{content.description}</p>
         </div>
+
         <Slider className="actions-slider" {...slickSettings}>
-          <div className="actions-slide">
-            <div className="actions-video">
-              <i className="hb-ico play-ico-big" />
-            </div>
-          </div>
-          <div className="actions-slide">
-            <div className="actions-video">
-              <i className="hb-ico play-ico-big" />
-            </div>
-          </div>
-          <div className="actions-slide">
-            <div className="actions-video">
-              <i className="hb-ico play-ico-big" />
-            </div>
-          </div>
-          <div className="actions-slide">
-            <div className="actions-video">
-              <i className="hb-ico play-ico-big" />
-            </div>
-          </div>
-          <div className="actions-slide">
-            <div className="actions-video">
-              <i className="hb-ico play-ico-big" />
-            </div>
-          </div>
+          {content.videos.map((x) => {
+            const { id, href } = x;
+
+            return (
+              <div className="actions-slide" key={id}>
+                <div className="actions-video">
+                  <i className="hb-ico play-ico-big" href={href} />
+                </div>
+              </div>
+            );
+          })}
         </Slider>
+
         <div className="actions-bottom">
           <p>More videos available on our content page</p>
-          <Link to="/content" className="primary-btn primary-btn-blue">
+          <Link to={routes.INFO.CONTENT} className="primary-btn primary-btn-blue">
             see our content
           </Link>
         </div>

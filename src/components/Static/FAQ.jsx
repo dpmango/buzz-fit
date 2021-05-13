@@ -2,8 +2,7 @@ import React, { useCallback, useState, useMemo } from 'react';
 import { SlideDown } from 'react-slidedown';
 import cns from 'classnames';
 
-import { TermsContent, PageTop } from '@components/Static/particles';
-import { each } from 'lodash';
+import { PageTop } from '@components/Static/particles';
 
 const FAQ = ({ ...props }) => {
   const [accardeon, setAccardeon] = useState(null);
