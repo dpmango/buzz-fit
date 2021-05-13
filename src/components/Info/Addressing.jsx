@@ -1,11 +1,24 @@
 import React, { useMemo } from 'react';
 import { observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
 import cns from 'classnames';
 
+import { createSlickConfig } from '@helpers';
 import routes from '@config/routes';
 
 const Addressing = observer(({ ...props }) => {
+  const slickSettings = createSlickConfig(
+    {
+      arrows: true,
+    },
+    {
+      fade: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    }
+  );
+
   return (
     <section className="addressing">
       <div className="wrapper">
@@ -31,7 +44,7 @@ const Addressing = observer(({ ...props }) => {
             </ul>
           </div>
           <div className="addressing-images">
-            <div className="addressing-slider">
+            <Slider className="addressing-slider" {...slickSettings}>
               <div className="addressing-slide">
                 <div className="addressing-bg">
                   <img src="/img/addressing/bg-1-min.png" alt="" />
@@ -56,7 +69,7 @@ const Addressing = observer(({ ...props }) => {
                   <i className="hb-ico play-ico-big"></i>
                 </div>
               </div>
-            </div>
+            </Slider>
           </div>
         </div>
       </div>

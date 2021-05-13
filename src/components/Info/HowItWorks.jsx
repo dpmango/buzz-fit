@@ -1,11 +1,26 @@
 import React, { useMemo } from 'react';
 import { observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
 import cns from 'classnames';
 
+import { createSlickConfig } from '@helpers';
 import routes from '@config/routes';
 
 const HowItWorks = observer(({ ...props }) => {
+  const slickSettings = createSlickConfig(
+    {
+      arrows: true,
+    },
+    {
+      dots: true,
+      fade: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+    }
+  );
+
   return (
     <section className="howItWorks">
       <div className="howItWorks-main">
@@ -28,7 +43,7 @@ const HowItWorks = observer(({ ...props }) => {
       <div className="howItWorks-block">
         <div className="wrapper">
           <h2 className="section-title">Device installation</h2>
-          <div className="howItWorks-slider">
+          <Slider className="howItWorks-slider" {...slickSettings}>
             <div className="howItWorks-slide">
               <div className="howItWorks-img">
                 <span className="howItWorks-num">1</span>
@@ -78,13 +93,13 @@ const HowItWorks = observer(({ ...props }) => {
                 your revenue even further.
               </p>
             </div>
-          </div>
+          </Slider>
         </div>
       </div>
       <div className="howItWorks-block howItWorks-block__second">
         <div className="wrapper">
           <h2 className="section-title">Track Your Success</h2>
-          <div className="howItWorks-slider">
+          <Slider className="howItWorks-slider" {...slickSettings}>
             <div className="howItWorks-slide">
               <div className="howItWorks-img">
                 <img src="/img/howItWorks/img-2-min.png" alt="" />
@@ -103,7 +118,7 @@ const HowItWorks = observer(({ ...props }) => {
               </div>
               <p>Track your ongoing contribution to health literacy and edcuation</p>
             </div>
-          </div>
+          </Slider>
         </div>
       </div>
     </section>

@@ -4,19 +4,24 @@ import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import cns from 'classnames';
 
+import { createSlickConfig } from '@helpers';
 import routes from '@config/routes';
 
 const Main = observer(({ ...props }) => {
-  const slickSettings = {
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    autoplay: false,
-    accessibility: true,
-  };
+  const slickSettings = createSlickConfig(
+    {
+      arrows: true,
+    },
+    {
+      fade: true,
+
+      slidesToShow: 1,
+      slidesToScroll: 1,
+
+      autoplaySpeed: 10000,
+      autoplay: true,
+    }
+  );
 
   return (
     <section className="testimonials">
@@ -42,49 +47,47 @@ const Main = observer(({ ...props }) => {
             </div>
           </div>
           <div className="testimonials-col testimonials-col__2">
-            <div className="testimonials-slider">
-              <Slider {...slickSettings}>
-                <div className="testimonials-slide">
-                  <div className="testimonials-desc">
-                    <p>
-                      “When people ask me what ‘American Pie’ means, I tell them it means I don’t ever have to work
-                      again if I don’t want to.
-                    </p>
-                    <span>- Don McLean</span>
-                  </div>
-                  <div className="testimonials-human">
-                    <img src="/img/testimonials/user-1-min.png" alt="" />
-                  </div>
-                  <span className="testimonials-position">American singer-songwriter</span>
+            <Slider className="testimonials-slider" {...slickSettings}>
+              <div className="testimonials-slide">
+                <div className="testimonials-desc">
+                  <p>
+                    “When people ask me what ‘American Pie’ means, I tell them it means I don’t ever have to work again
+                    if I don’t want to.
+                  </p>
+                  <span>- Don McLean</span>
                 </div>
-                <div className="testimonials-slide">
-                  <div className="testimonials-desc">
-                    <p>
-                      “When people ask me what ‘American Pie’ means, I tell them it means I don’t ever have to work
-                      again if I don’t want to.
-                    </p>
-                    <span>- Don McLean</span>
-                  </div>
-                  <div className="testimonials-human">
-                    <img src="/img/testimonials/user-1-min.png" alt="" />
-                  </div>
-                  <span className="testimonials-position">American singer-songwriter</span>
+                <div className="testimonials-human">
+                  <img src="/img/testimonials/user-1-min.png" alt="" />
                 </div>
-                <div className="testimonials-slide">
-                  <div className="testimonials-desc">
-                    <p>
-                      “When people ask me what ‘American Pie’ means, I tell them it means I don’t ever have to work
-                      again if I don’t want to.
-                    </p>
-                    <span>- Don McLean</span>
-                  </div>
-                  <div className="testimonials-human">
-                    <img src="/img/testimonials/user-1-min.png" alt="" />
-                  </div>
-                  <span className="testimonials-position">American singer-songwriter</span>
+                <span className="testimonials-position">American singer-songwriter</span>
+              </div>
+              <div className="testimonials-slide">
+                <div className="testimonials-desc">
+                  <p>
+                    “When people ask me what ‘American Pie’ means, I tell them it means I don’t ever have to work again
+                    if I don’t want to.
+                  </p>
+                  <span>- Don McLean</span>
                 </div>
-              </Slider>
-            </div>
+                <div className="testimonials-human">
+                  <img src="/img/testimonials/user-1-min.png" alt="" />
+                </div>
+                <span className="testimonials-position">American singer-songwriter</span>
+              </div>
+              <div className="testimonials-slide">
+                <div className="testimonials-desc">
+                  <p>
+                    “When people ask me what ‘American Pie’ means, I tell them it means I don’t ever have to work again
+                    if I don’t want to.
+                  </p>
+                  <span>- Don McLean</span>
+                </div>
+                <div className="testimonials-human">
+                  <img src="/img/testimonials/user-1-min.png" alt="" />
+                </div>
+                <span className="testimonials-position">American singer-songwriter</span>
+              </div>
+            </Slider>
             <div className="testimonials-mob">
               <div className="info-buttons">
                 <Link to="/order" className="primary-btn primary-btn-purple">

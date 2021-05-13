@@ -1,22 +1,39 @@
 import React, { useMemo } from 'react';
 import { observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
-import cns from 'classnames';
 import Slider from 'react-slick';
+import cns from 'classnames';
 
+import { createSlickConfig } from '@helpers';
 import routes from '@config/routes';
 
 const Actions = observer(({ ...props }) => {
-  const sliderSettingsThree = {
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: true,
-    autoplay: false,
-    accessibility: true,
-  };
+  const slickSettings = createSlickConfig(
+    {
+      arrows: true,
+    },
+    {
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      autoplay: true,
+      autoplaySpeed: 10000,
+      responsive: [
+        {
+          breakpoint: 860,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 660,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+    }
+  );
 
   return (
     <section className="actions">
@@ -26,35 +43,33 @@ const Actions = observer(({ ...props }) => {
           <h2 className="section-title">Buzz Fit in action</h2>
           <p>Buzz Fit focuses on delivering simple healthcare messaging</p>
         </div>
-        <div className="actions-slider">
-          <Slider {...sliderSettingsThree}>
-            <div className="actions-slide">
-              <div className="actions-video">
-                <i className="hb-ico play-ico-big" />
-              </div>
+        <Slider className="actions-slider" {...slickSettings}>
+          <div className="actions-slide">
+            <div className="actions-video">
+              <i className="hb-ico play-ico-big" />
             </div>
-            <div className="actions-slide">
-              <div className="actions-video">
-                <i className="hb-ico play-ico-big" />
-              </div>
+          </div>
+          <div className="actions-slide">
+            <div className="actions-video">
+              <i className="hb-ico play-ico-big" />
             </div>
-            <div className="actions-slide">
-              <div className="actions-video">
-                <i className="hb-ico play-ico-big" />
-              </div>
+          </div>
+          <div className="actions-slide">
+            <div className="actions-video">
+              <i className="hb-ico play-ico-big" />
             </div>
-            <div className="actions-slide">
-              <div className="actions-video">
-                <i className="hb-ico play-ico-big" />
-              </div>
+          </div>
+          <div className="actions-slide">
+            <div className="actions-video">
+              <i className="hb-ico play-ico-big" />
             </div>
-            <div className="actions-slide">
-              <div className="actions-video">
-                <i className="hb-ico play-ico-big" />
-              </div>
+          </div>
+          <div className="actions-slide">
+            <div className="actions-video">
+              <i className="hb-ico play-ico-big" />
             </div>
-          </Slider>
-        </div>
+          </div>
+        </Slider>
         <div className="actions-bottom">
           <p>More videos available on our content page</p>
           <Link to="/content" className="primary-btn primary-btn-blue">

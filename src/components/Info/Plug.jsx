@@ -1,8 +1,72 @@
-import React, { useMemo } from 'react';
+/* eslint-disable react/prop-types */
+import React, { useEffect, useState, useMemo } from 'react';
 import { observer } from 'mobx-react';
+import Slider from 'react-slick';
 import cns from 'classnames';
 
+import { createSlickConfig } from '@helpers';
+import { useWindowSize } from '@src/hooks';
+
 const Plug = observer(({ ...props }) => {
+  const [mode, setMode] = useState(null);
+  const size = useWindowSize();
+
+  const content = {
+    slides: [
+      {
+        id: 1,
+        image: '/img/device/img-1-min.png',
+        title: 'Educational & relevant',
+        content: 'Edcuated patients increase request for service',
+      },
+      {
+        id: 2,
+        image: '/img/device/img-3-min.png',
+        title: 'Prepared patients',
+        content: 'Engaged patients come prepared',
+      },
+      {
+        id: 3,
+        image: '/img/device/img-2-min.png',
+        title: 'Transformed experience',
+        content: 'Happy patients keep coming back',
+      },
+      {
+        id: 4,
+        image: '/img/device/img-4-min.png',
+        title: 'Passive income',
+        content: 'Increase your practices income',
+      },
+    ],
+  };
+
+  const slickSettings = createSlickConfig(
+    {},
+    {
+      dots: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    }
+  );
+
+  useEffect(() => {
+    setMode(size.width <= 767 ? 'mobile' : 'desktop');
+  }, [size.width, setMode]);
+
+  const Slide = ({ id, image, title, content }) => (
+    <>
+      <div className={cns('plug-col', `plug-col__${id}`)}>
+        <div className="plug-wrap">
+          <div className="plug-img">
+            <img src={image} alt="" />
+          </div>
+          <span className="plug-subtitle">{title}</span>
+          <p>{content}</p>
+        </div>
+      </div>
+    </>
+  );
+
   return (
     <section className="plug">
       <div className="plug-bg">
@@ -14,44 +78,20 @@ const Plug = observer(({ ...props }) => {
           <div className="plug-box">
             <img src="/img/device/box-min.png" alt="" />
           </div>
-          <div className="plug-slider">
-            <div className="plug-col plug-col__1">
-              <div className="plug-wrap">
-                <div className="plug-img">
-                  <img src="/img/device/img-1-min.png" alt="" />
-                </div>
-                <span className="plug-subtitle">Educational & relevant</span>
-                <p>Edcuated patients increase request for service</p>
-              </div>
+          {mode === 'desktop' && (
+            <div className="plug-slider">
+              {content.slides.map((slide) => (
+                <Slide key={slide.id} {...slide} />
+              ))}
             </div>
-            <div className="plug-col plug-col__2">
-              <div className="plug-wrap">
-                <div className="plug-img">
-                  <img src="/img/device/img-3-min.png" alt="" />
-                </div>
-                <span className="plug-subtitle">Prepared patients</span>
-                <p>Engaged patients come prepared</p>
-              </div>
-            </div>
-            <div className="plug-col plug-col__3">
-              <div className="plug-wrap">
-                <div className="plug-img">
-                  <img src="/img/device/img-2-min.png" alt="" />
-                </div>
-                <span className="plug-subtitle">Transformed experience</span>
-                <p>Happy patients keep coming back</p>
-              </div>
-            </div>
-            <div className="plug-col plug-col__4">
-              <div className="plug-wrap">
-                <div className="plug-img">
-                  <img src="/img/device/img-4-min.png" alt="" />
-                </div>
-                <span className="plug-subtitle">Passive income</span>
-                <p>Increase your practices income</p>
-              </div>
-            </div>
-          </div>
+          )}
+          {mode === 'mobile' && (
+            <Slider className="plug-slider" {...slickSettings}>
+              {content.slides.map((slide) => (
+                <Slide key={slide.id} {...slide} />
+              ))}
+            </Slider>
+          )}
         </div>
       </div>
     </section>

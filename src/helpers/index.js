@@ -7,3 +7,4 @@ export {
   responseMapperAuth,
 } from './ApiMappers';
 export { getEnv } from './Env';
+export { createSlickConfig } from './SlickSettings';
