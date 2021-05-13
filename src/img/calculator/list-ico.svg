@@ -1,7 +1,1 @@
-<svg width="41" height="31" viewBox="0 0 41 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle opacity="0.1" cx="25.2459" cy="15.5057" r="15.1307" fill="#A9BB55"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M1.58789 15.5029L30.642 15.5029L1.58789 15.5029Z" fill="#A9BB55"/>
-<path d="M1.58789 15.5029L30.642 15.5029" stroke="#A9BB55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M25.2129 10.074L30.6407 15.5018L25.2129 20.9297" fill="#A9BB55"/>
-<path d="M25.2129 10.074L30.6407 15.5018L25.2129 20.9297" stroke="#A9BB55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+<svg width="41" height="31" fill="none" xmlns="http://www.w3.org/2000/svg"><circle opacity=".1" cx="25.246" cy="15.506" r="15.131" fill="#A9BB55"/><path fill-rule="evenodd" clip-rule="evenodd" d="M1.588 15.503h29.054H1.588z" fill="#A9BB55"/><path d="M1.588 15.503h29.054" stroke="#A9BB55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M25.213 10.074l5.428 5.428-5.428 5.428" fill="#A9BB55"/><path d="M25.213 10.074l5.428 5.428-5.428 5.428" stroke="#A9BB55" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
