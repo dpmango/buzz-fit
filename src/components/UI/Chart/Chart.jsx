@@ -213,7 +213,7 @@ const Chart = ({ data, type, ...props }) => {
     }
   }, [data]);
 
-  return <div className={cns('amchart', type)} id={chart_id}></div>;
+  return <div className={cns('amchart')} id={chart_id}></div>;
 };
 
 Chart.propTypes = {
