@@ -49,6 +49,7 @@
     "react-slick": "^0.28.1",
     "react-slidedown": "^2.4.5",
     "react-spinners": "^0.10.6",
+    "react-transition-group": "^4.4.1",
     "retry-axios": "^2.4.0",
     "viewport-units-buggyfill": "^0.6.2",
     "web-vitals": "^1.0.1"

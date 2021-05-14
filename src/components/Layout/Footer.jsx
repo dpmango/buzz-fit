@@ -58,7 +58,7 @@ const Footer = ({ ...props }) => {
               Company
             </span>
             <SlideDown>
-              {active['1'] ? (
+              {active['1'] || size.width > 768 ? (
                 <ul>
                   <li>
                     <Link to={routes.STATIC.ABOUT}>About us</Link>
@@ -81,7 +81,7 @@ const Footer = ({ ...props }) => {
               Support
             </span>
             <SlideDown>
-              {active['2'] ? (
+              {active['2'] || size.width > 768 ? (
                 <ul>
                   <li>
                     <Link to={routes.STATIC.FAQ}>FAQ</Link>
@@ -112,8 +112,8 @@ const Footer = ({ ...props }) => {
             <span className="footer-subtitle" onClick={() => handleSubtitleClick(3)}>
               Community
             </span>
-            <SlideDown>
-              {active['3'] ? (
+            <SlideDown open={true}>
+              {active['3'] || size.width > 768 ? (
                 <ul>
                   <li>
                     <Link to="" target="_blank">

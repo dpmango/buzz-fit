@@ -2,8 +2,7 @@ import React, { useCallback, useState, useMemo } from 'react';
 import { SlideDown } from 'react-slidedown';
 import cns from 'classnames';
 
-import { TermsContent, PageTop } from '@components/Static/particles';
-import { each } from 'lodash';
+import { PageTop } from '@components/Static/particles';
 
 const FAQ = ({ ...props }) => {
   const [accardeon, setAccardeon] = useState(null);
@@ -117,7 +116,7 @@ const FAQ = ({ ...props }) => {
       <div className="faq-content">
         <div className="wrapper">
           {content.blocks.map((x) => (
-            <div key={x} className="accordeon" onClick={() => handleAccardeonClick(x.id)}>
+            <div key={x.id} className="accordeon" onClick={() => handleAccardeonClick(x.id)}>
               <div className="accordeon-top">
                 <h3 className="accordeon-title">{x.title}</h3>
               </div>
