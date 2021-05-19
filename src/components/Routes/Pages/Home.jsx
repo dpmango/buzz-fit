@@ -21,7 +21,7 @@ const HomePage = () => {
         <Steps className="steps-second" />
       </div>
       <Helmet>
-        <title>Buzz Fit - Главная</title>
+        <title>Buzz Fit - Homepage</title>
       </Helmet>
     </>
   );
