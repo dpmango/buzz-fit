@@ -1,5 +1,4 @@
 export { default as Device } from './Device';
-export { default as Plug } from './Plug';
 export { default as Advantages } from './Advantages';
 export { default as Streaming } from './Streaming';
 export { default as Guarantee } from './Guarantee';
