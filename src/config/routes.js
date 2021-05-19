@@ -8,7 +8,6 @@ export default {
   },
   ORDER: {
     ROOT: '/order',
-    PAYMENT: '/order/payment',
     CONFIRMATION: '/order/confirmation',
     RECEPIT: '/order/recepit',
     INVOICE: '/order/invoice',

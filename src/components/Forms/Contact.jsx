@@ -1,25 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { Input } from '@ui';
 
 const ContactForm = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    alert('TODO - contact form submited');
+  };
+
   return (
     <form action="">
       <div className="input-row">
         <div className="input-col">
-          <div className="input-block">
-            <input type="text" name="name" placeholder="Full Name" />
-          </div>
+          <Input value={name} placeholder="Full Name" type="text" onChange={(v) => setName(v)} />
         </div>
         <div className="input-col">
-          <div className="input-block">
-            <input type="email" name="email" placeholder="Email Address" />
-          </div>
+          <Input value={email} placeholder="Email Address" type="email" onChange={(v) => setEmail(v)} />
         </div>
       </div>
-      <div className="input-block">
-        <textarea name="text" placeholder="Your Message"></textarea>
-      </div>
+      <Input value={message} type="textarea" placeholder="Your Message" onChange={(v) => setMessage(v)} />
+
       <div className="contactUs-form__btn">
-        <button className="primary-btn">Send message</button>
+        <button type="submit" className="primary-btn">
+          Send message
+        </button>
       </div>
     </form>
   );

@@ -35,7 +35,8 @@ const Input = ({
 
   const inputIcon = useMemo(() => {
     if (icon) {
-      return <SvgIcon name={icon} className={cns('input_icon', iconPosition && `_pos${iconPosition}`)} />;
+      return <i className={cns('hb-ico', icon)} />;
+      // return <SvgIcon name={icon} className={cns('input_icon', iconPosition && `_pos${iconPosition}`)} />;
     }
 
     return null;
@@ -83,14 +84,14 @@ const Input = ({
   return (
     <div
       style={props.style}
-      className={cns('input', variant && VariantClasses[variant], modifier && `_${modifier}`, className)}>
+      className={cns('input-block', variant && VariantClasses[variant], modifier && `_${modifier}`, className)}>
       {label && (
         <label className="label" htmlFor={id}>
           {label}
         </label>
       )}
 
-      <div className="input_wrapper">
+      <div className="input-block__wrap">
         {inputIcon}
 
         {props.type === 'textarea' ? <textarea {...inputProps} /> : <input {...inputProps} />}
