@@ -1,27 +1,31 @@
 .select-container {
   .react-select {
     &__control {
-      font-size: 16px;
-      color: $fontColor;
-      border: 1px solid $borderColor;
-      min-height: 48px;
-      border-radius: 12px;
+      padding: 0 0px 0 0px;
+      font-size: 15px;
+      color: #7C808A;
+      background: #F6F8F9;
+      border: 2px solid #fff;
+      min-height: 60px;
+      border-radius: 10px;
       &--menu-is-open {
         z-index: 10;
       }
       &--is-focused,
       &--menu-is-open,
       &:hover {
-        border-color: transparent;
-        box-shadow: 0 0 0 1px $fontColor;
+        border: 2px solid #61B2AA;
       }
     }
     &__value-container {
-      padding: 10px 0 10px 15px;
-      font-size: 16px;
+      padding: 0px 0 0px 22px;
+      font-size: 15px;
     }
     &__indicator-separator {
       display: none;
+    }
+    &__input input{
+      height: auto !important;
     }
     &__menu {
       z-index: 9999;
@@ -37,16 +41,16 @@
     }
     &__option {
       font-weight: normal;
-      font-size: 16px;
-      line-height: (19 / 16);
-      padding: 14px 16px;
+      font-size: 15px;
+      line-height: 1.42;
+      padding: 14px 22px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      transition: background 0.1s $ease;
+      transition: background 0.1s ease-in-out;
       &--is-selected {
         background: rgba(0, 0, 0, 0.04);
-        color: $fontColor;
+        color: black;
       }
       &--is-focused {
         background: rgba(0, 0, 0, 0.1);
@@ -58,16 +62,14 @@
     .react-select {
       &__control {
         border: 0;
-        min-height: 24px;
-        border-radius: 12px;
-        background: transparent;
+        min-height: 35px;
       }
       &__value-container {
         padding: 0 0 0 8px;
       }
       &__option {
         font-weight: normal;
-        font-size: 14px;
+        font-size: 15px;
         padding: 10px 8px;
       }
     }
@@ -78,7 +80,7 @@ body.is-mobile {
   .select-container {
     .react-select {
       &__control {
-        box-shadow: 0 0 0 1px $fontColor;
+        border: 2px solid #61B2AA;
       }
     }
   }

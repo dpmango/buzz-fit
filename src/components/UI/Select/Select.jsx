@@ -6,7 +6,7 @@ import Select from 'react-select';
 
 import { SvgIcon } from '@ui';
 
-// import stylesGlobal from './Select.scss';
+import stylesGlobal from './Select.scss';
 
 const Variants = {
   DEFAULT: 'default',
