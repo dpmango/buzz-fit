@@ -1,10 +1,16 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import cns from 'classnames';
+
+import { CalculatorStoreContext } from '@store/CalculatorStore';
 
 import { Basis, Infograph, Graph } from '@components/Calculator';
 
 const Calculator = ({ ...props }) => {
   const [tab, setTab] = useState('info');
+
+  const calculatorContext = useContext(CalculatorStoreContext);
+  const { id } = useParams();
 
   const handleTabChange = useCallback(
     (tab, _event) => {
@@ -13,6 +19,13 @@ const Calculator = ({ ...props }) => {
     },
     [setTab]
   );
+
+  useEffect(() => {
+    // gets report data when accesing /report with direct link
+    if (!calculatorContext.isReportReady) {
+      calculatorContext.reportById({ id });
+    }
+  }, [id]);
 
   return (
     <section className="calculator">

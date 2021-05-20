@@ -18,7 +18,7 @@ const VariantClasses = {
   [Variants.SMALL]: 'small',
 };
 
-const SelectComponent = ({ label, value, className, options, onChange, variant, ...props }) => {
+const SelectComponent = ({ label, value, className, options, error, onChange, variant, ...props }) => {
   const id = useMemo(() => {
     return uniqueId();
   }, []);
@@ -38,13 +38,15 @@ const SelectComponent = ({ label, value, className, options, onChange, variant, 
       )}
       <div className={cns('select-container', variant && VariantClasses[variant])}>
         <Select
-          className="react-select-container"
+          className={cns('react-select-container', error && '_withError')}
           classNamePrefix="react-select"
           value={value}
           onChange={onSelectChange}
           options={options}
           {...props}
         />
+
+        {error && <div className={'error'}>{error}</div>}
       </div>
     </div>
   );
@@ -56,6 +58,7 @@ SelectComponent.propTypes = {
   value: PropTypes.object,
   className: PropTypes.string,
   options: PropTypes.array,
+  error: PropTypes.string,
   onChange: PropTypes.func,
 };
 

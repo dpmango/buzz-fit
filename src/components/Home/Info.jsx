@@ -69,7 +69,7 @@ const Info = observer(({ ...props }) => {
             </div>
           </div>
           <div className="info-button">
-            <Link to="/order" className="primary-btn primary-btn-yellow">
+            <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-yellow">
               Get your TV Box Now
             </Link>
           </div>
@@ -91,7 +91,7 @@ const Info = observer(({ ...props }) => {
                 </p>
               </div>
               <div className="info-button">
-                <Link to="/order" className="primary-btn primary-btn-peach">
+                <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-peach">
                   Get your TV Box Now
                 </Link>
               </div>
@@ -112,7 +112,7 @@ const Info = observer(({ ...props }) => {
                 </p>
               </div>
               <div className="info-button">
-                <Link to="/order" className="primary-btn primary-btn-yellow">
+                <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-yellow">
                   Get your TV Box Now
                 </Link>
               </div>
@@ -138,7 +138,7 @@ const Info = observer(({ ...props }) => {
                 </p>
               </div>
               <div className="info-buttons">
-                <Link to="/order" className="primary-btn primary-btn-purple">
+                <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-purple">
                   Get your TV Box Now
                 </Link>
                 <HashLinkScroll to="#cost" className="info-link">
@@ -169,7 +169,7 @@ const Info = observer(({ ...props }) => {
                 <p>Turn your cost to profit. View our cable cost comparison</p>
               </div>
               <div className="info-buttons">
-                <Link to="/order" className="primary-btn primary-btn-yellow">
+                <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-yellow">
                   Get your TV Box Now
                 </Link>
                 <HashLinkScroll smooth to="#compare" className="info-link">

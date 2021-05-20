@@ -38,7 +38,7 @@ const Main = observer(({ ...props }) => {
                 directly from the advertising your Patients watch.
               </p>
               <div className="info-buttons">
-                <Link to="/order" className="primary-btn primary-btn-purple">
+                <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-purple">
                   Get your TV Box Now
                 </Link>
                 <HashLinkScroll to="#calculate" className="info-link">
@@ -94,7 +94,7 @@ const Main = observer(({ ...props }) => {
 
             <div className="testimonials-mob">
               <div className="info-buttons">
-                <Link to="/order" className="primary-btn primary-btn-purple">
+                <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-purple">
                   Get your TV Box Now
                 </Link>
                 <HashLinkScroll to="#calculate" className="info-link">

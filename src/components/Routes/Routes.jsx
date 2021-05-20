@@ -42,7 +42,7 @@ const Routes = observer(() => {
               <Home />
             </Route>
 
-            <Route exact path={routes.CALCULATOR}>
+            <Route path={routes.CALCULATOR}>
               <Calculator />
             </Route>
 
