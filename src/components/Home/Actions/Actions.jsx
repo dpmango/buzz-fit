@@ -57,7 +57,11 @@ const Actions = observer(({ ...props }) => {
 
   useEffect(() => {
     if (window.jwplayer && player && UiContext.activeModal === null) {
-      player.destroy();
+      try {
+        player.destroy();
+      } catch (e) {
+        console.log('error destroying player');
+      }
     }
   }, [player, UiContext.activeModal]);
 

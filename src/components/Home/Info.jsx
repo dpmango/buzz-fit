@@ -3,6 +3,7 @@ import { observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 import cns from 'classnames';
 
+import { HashLinkScroll } from '@ui';
 import routes from '@config/routes';
 
 const Info = observer(({ ...props }) => {
@@ -140,10 +141,10 @@ const Info = observer(({ ...props }) => {
                 <Link to="/order" className="primary-btn primary-btn-purple">
                   Get your TV Box Now
                 </Link>
-                <Link to="#cost" className="info-link">
+                <HashLinkScroll to="#cost" className="info-link">
                   <i className="hb-ico play-ico" />
                   Cost of getting it wrong
-                </Link>
+                </HashLinkScroll>
               </div>
             </div>
           </div>
@@ -171,10 +172,10 @@ const Info = observer(({ ...props }) => {
                 <Link to="/order" className="primary-btn primary-btn-yellow">
                   Get your TV Box Now
                 </Link>
-                <Link to="#compare" className="info-link">
+                <HashLinkScroll smooth to="#compare" className="info-link">
                   <i className="hb-ico play-ico-yellow" />
                   See how we compare
-                </Link>
+                </HashLinkScroll>
               </div>
             </div>
           </div>

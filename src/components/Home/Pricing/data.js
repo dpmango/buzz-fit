@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { Tooltip } from '@ui';
 
 export default {
@@ -45,7 +45,9 @@ export default {
         '$0',
         <>
           <span className="pricing-title">YOU EARN PASSIVE INCOME</span>
-          <Link to="#calculate">Calculate your potential savings</Link>
+          <HashLink smooth to="#calculate">
+            Calculate your potential savings
+          </HashLink>
         </>,
       ],
     },

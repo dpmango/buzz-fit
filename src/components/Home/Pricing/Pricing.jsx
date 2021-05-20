@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
 import cns from 'classnames';
 
-import { Tooltip } from '@ui';
+import { Tooltip, HashLinkScroll } from '@ui';
 import routes from '@config/routes';
 
 import content from './data';
@@ -66,9 +66,9 @@ const Pricing = observer(({ ...props }) => {
 
           {mobileTabs}
 
-          <Link to="#calculate" className="pricing-mob__link">
+          <HashLinkScroll to="#calculate" className="pricing-mob__link">
             Calculate your potential savings
-          </Link>
+          </HashLinkScroll>
         </div>
         <div className="pricing-bottom">
           <Link to="/order" className="primary-btn primary-btn-purple">
