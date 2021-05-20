@@ -29,14 +29,6 @@ const Loader = ({ className, ...props }) => {
 const LoaderContextProvider = (props) => {
   const [isLoading, setLoading] = useState(false);
 
-  // const value = useMemo(
-  //   () => ({
-  //     isLoading,
-  //     setLoading,
-  //   }),
-  //   [isLoading]
-  // );
-
   return (
     <LoaderContext.Provider value={{ isLoading, setLoading }}>
       <AxiosInterceptors>{props.children}</AxiosInterceptors>

@@ -1,4 +1,5 @@
 .select-container {
+  position: relative;
   .react-select {
     &__control {
       padding: 0 0px 0 0px;
@@ -55,6 +56,11 @@
       &--is-focused {
         background: rgba(0, 0, 0, 0.1);
       }
+    }
+  }
+  .react-select-container._withError{
+    div[class$="control"]{
+      border-color: tomato;
     }
   }
 

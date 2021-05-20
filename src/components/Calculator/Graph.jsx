@@ -1,9 +1,15 @@
-import React, { useCallback, useRef, useEffect, useMemo } from 'react';
+import React, { useContext, useMemo } from 'react';
+import { observer } from 'mobx-react';
 import cns from 'classnames';
 
+import { CalculatorStoreContext } from '@store/CalculatorStore';
 import { Chart } from '@ui';
 
-const Graph = ({ ...props }) => {
+const Graph = observer(({ ...props }) => {
+  const calculatorContext = useContext(CalculatorStoreContext);
+
+  const summary = calculatorContext.reportSummary;
+
   const chartData = useMemo(() => {
     let data = [];
     let value = 50;
@@ -26,7 +32,7 @@ const Graph = ({ ...props }) => {
       <div className="calculator-bottom">
         <div className="calculator-bottom__info">
           <p>your Cumulative savings Over 5 Years</p>
-          <span>$731,000</span>
+          <span>${summary && summary.Total.toLocaleString()}</span>
         </div>
         <div className="calculator-bottom__btn">
           <a href="#" className="primary-btn primary-btn-green">
@@ -36,6 +42,6 @@ const Graph = ({ ...props }) => {
       </div>
     </>
   );
-};
+});
 
 export default Graph;

@@ -1,8 +1,4 @@
-export const responseMapperList = ({ info: list }) => ({
-  list,
-});
-
-export const responseMapperData = ({ info: data }) => ({
+export const responseMapperData = ({ data: data }) => ({
   data,
 });
 

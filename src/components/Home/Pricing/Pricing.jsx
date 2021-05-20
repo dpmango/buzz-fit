@@ -71,7 +71,7 @@ const Pricing = observer(({ ...props }) => {
           </HashLinkScroll>
         </div>
         <div className="pricing-bottom">
-          <Link to="/order" className="primary-btn primary-btn-purple">
+          <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-purple">
             Get your TV Box Now
           </Link>
           <p>For only a one time refundable deposit of $199.00</p>

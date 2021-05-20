@@ -1,5 +1,5 @@
 import { ApiService } from '@services';
-import { buildCustomApiError, responseMapperAuth, responseMapperList } from '@helpers';
+import { buildCustomApiError, responseMapperAuth } from '@helpers';
 import api from '@api/users';
 
 class AuthService extends ApiService {
