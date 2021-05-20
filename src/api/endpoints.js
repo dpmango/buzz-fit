@@ -7,4 +7,7 @@ export default {
     report: '/calculator/report',
     reportById: '/calculator/report/:id',
   },
+  forms: {
+    contact: '/contact',
+  },
 };

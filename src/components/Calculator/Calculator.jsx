@@ -1,5 +1,5 @@
 import React, { useCallback, useContext, useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import cns from 'classnames';
 
 import { CalculatorStoreContext } from '@store/CalculatorStore';
@@ -10,6 +10,7 @@ const Calculator = ({ ...props }) => {
   const [tab, setTab] = useState('info');
 
   const calculatorContext = useContext(CalculatorStoreContext);
+  const history = useHistory();
   const { id } = useParams();
 
   const handleTabChange = useCallback(
@@ -20,10 +21,19 @@ const Calculator = ({ ...props }) => {
     [setTab]
   );
 
-  useEffect(() => {
+  useEffect(async () => {
     // gets report data when accesing /report with direct link
     if (!calculatorContext.isReportReady) {
-      calculatorContext.reportById({ id });
+      await calculatorContext
+        .reportById({ id })
+        .then((res) => {
+          if (res.Status === 'error') {
+            history.push('/404');
+          }
+        })
+        .catch((err) => {
+          history.push('/404');
+        });
     }
   }, [id]);
 

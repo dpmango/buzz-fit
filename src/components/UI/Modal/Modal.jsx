@@ -81,12 +81,12 @@ const ModifierClasses = {
 };
 
 const ModalComponent = observer(({ variant, modifier, name, title, closeText, children }) => {
-  const uiContext = useContext(UiStoreContext);
+  const UiContext = useContext(UiStoreContext);
 
   const afterOpenModal = () => {};
 
   const closeModal = () => {
-    uiContext.resetModal();
+    UiContext.resetModal();
   };
 
   let CSSinJSstyles = sharedStyles;
@@ -101,7 +101,7 @@ const ModalComponent = observer(({ variant, modifier, name, title, closeText, ch
     <div>
       <Modal
         className={`ReactModal__Content--${variant}`}
-        isOpen={uiContext.activeModal === name}
+        isOpen={UiContext.activeModal === name}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         closeTimeoutMS={300}
