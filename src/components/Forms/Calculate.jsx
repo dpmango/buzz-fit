@@ -74,10 +74,18 @@ const Calculate = observer(({ ...props }) => {
     e.preventDefault();
 
     if (validate()) {
+      const postObj = {
+        ppw: parseInt(perWeek),
+        wpy: parseInt(perYear),
+        code: speciality.value,
+        email,
+      };
+
       await calculatorContext
-        .report({ ppw: perWeek, wpy: perYear, code: speciality.value, email })
+        .report(postObj)
         .then((res) => {
           const { Status, ID } = res;
+
           if (Status === 'ok') {
             resetForm();
             history.push(routes.CALCULATOR.replace(':id', ID));

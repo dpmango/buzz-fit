@@ -31,6 +31,34 @@ export default class CalculatorStore {
     return this.reportData;
   }
 
+  get reportSummary() {
+    const profit = this.getReport.Profit;
+
+    if (profit) {
+      let summary = {
+        Savings: 0,
+        Profitability: 0,
+        Volume: 0,
+        Total: 0,
+      };
+
+      Object.keys(profit).map((key) => {
+        const curObj = profit[key];
+
+        summary = {
+          Savings: summary.Savings + curObj.Savings,
+          Profitability: summary.Profitability + curObj.Profitability,
+          Volume: summary.Volume + curObj.Volume,
+          Total: summary.Total + curObj.Total,
+        };
+      });
+
+      return summary;
+    }
+
+    return null;
+  }
+
   // getNodesById = computedFn((node_id) => {
   //   return this.nodes.get(`${node_id}`);
   // });
@@ -74,3 +102,13 @@ export default class CalculatorStore {
     return result;
   }
 }
+
+// Admin: 0
+// Loss: 0
+// Profitability: 0
+// Promotion: 0
+// Reimbursements: 0
+// Retention: 0
+// Savings: 0
+// Total: 0
+// Volume: 0

@@ -1,7 +1,14 @@
-import React, { useMemo } from 'react';
+import React, { useContext, useMemo } from 'react';
+import { observer } from 'mobx-react';
 import cns from 'classnames';
 
-const Infograph = ({ ...props }) => {
+import { CalculatorStoreContext } from '@store/CalculatorStore';
+
+const Infograph = observer(({ ...props }) => {
+  const calculatorContext = useContext(CalculatorStoreContext);
+
+  const summary = calculatorContext.reportSummary;
+
   return (
     <>
       <h1 className="calculator-title">Your savings before passive income even comes into play</h1>
@@ -13,7 +20,7 @@ const Infograph = ({ ...props }) => {
           <div className="calculator-descr">
             <div>
               <span className="calculator-sub">Save</span>
-              <span className="calculator-tit">$472,000</span>
+              <span className="calculator-tit">${summary && summary.Savings.toLocaleString()}</span>
               <ul>
                 <li>Through patients</li>
                 <li>Retention</li>
@@ -28,7 +35,7 @@ const Infograph = ({ ...props }) => {
                 <li>Business</li>
                 <li>Profitability Growth</li>
               </ul>
-              <span className="calculator-tit">$138,000</span>
+              <span className="calculator-tit">${summary && summary.Profitability.toLocaleString()}</span>
             </div>
           </div>
           <div className="calculator-img">
@@ -41,7 +48,7 @@ const Infograph = ({ ...props }) => {
           </div>
           <div className="calculator-descr">
             <div>
-              <span className="calculator-tit">$122,000</span>
+              <span className="calculator-tit">${summary && summary.Volume.toLocaleString()}</span>
               <ul>
                 <li>Business Volume</li>
                 <li>
@@ -69,7 +76,7 @@ const Infograph = ({ ...props }) => {
       <div className="calculator-bottom">
         <div className="calculator-bottom__info">
           <p>your Cumulative savings Over 5 Years</p>
-          <span>$731,000</span>
+          <span>${summary && summary.Total.toLocaleString()}</span>
         </div>
         <div className="calculator-bottom__btn">
           <a href="#" className="primary-btn primary-btn-green">
@@ -79,6 +86,6 @@ const Infograph = ({ ...props }) => {
       </div>
     </>
   );
-};
+});
 
 export default Infograph;
