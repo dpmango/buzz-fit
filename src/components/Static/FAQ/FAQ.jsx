@@ -53,9 +53,12 @@ const FAQ = ({ ...props }) => {
               <div className="wrapper">
                 {section.blocks &&
                   section.blocks.map((x) => (
-                    <div key={x.id} className="accordeon" onClick={() => handleAccardeonClick(x.id)}>
+                    <div
+                      key={x.id}
+                      className={cns('accordeon', x.id === accardeon && 'accordeon-active')}
+                      onClick={() => handleAccardeonClick(x.id)}>
                       <div className="accordeon-top">
-                        <h3 className="accordeon-title">{x.title}</h3>
+                        <h3 className="accordeon-title" dangerouslySetInnerHTML={{ __html: x.title }} />
                       </div>
                       <SlideDown>
                         {accardeon === x.id ? <div className="accordeon-block">{x.content}</div> : null}
