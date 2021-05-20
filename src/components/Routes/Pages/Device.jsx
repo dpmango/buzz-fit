@@ -1,13 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { Device, Plug, Advantages, Streaming, Guarantee, Hero } from '@components/Info';
+import { Device, Advantages, Streaming, Guarantee, Hero } from '@components/Info';
 
 const DevicePage = () => {
   return (
     <>
       <Device />
-      <Plug />
       <Advantages />
       <Streaming />
       <Guarantee />

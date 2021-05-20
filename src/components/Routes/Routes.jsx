@@ -116,6 +116,13 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     scrollToStart(300);
+
+    // push HubSpot page views
+    let _hsq = (window._hsq = window._hsq || []);
+    setTimeout(() => {
+      _hsq.push(['setPath', pathname]);
+      _hsq.push(['trackPageView']);
+    }, 500);
   }, [pathname]);
 
   return null;

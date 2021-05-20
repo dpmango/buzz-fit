@@ -1,7 +1,8 @@
-import React, { useMemo } from 'react';
 import cns from 'classnames';
+import React, { useMemo } from 'react';
 
 import ContactForm from '@components/Forms/Contact';
+import { DefaultMap } from '../Maps/Maps';
 
 const Contact = ({ ...props }) => {
   return (
@@ -23,7 +24,9 @@ const Contact = ({ ...props }) => {
         </div>
       </div>
       <div className="contactUs-map">
-        <div className="map" id="map"></div>
+        <div className="map" id="map">
+          <DefaultMap />
+        </div>
       </div>
     </section>
   );

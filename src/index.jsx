@@ -10,8 +10,12 @@ import ReactDOM from 'react-dom';
 import { BrowserInfo } from '@services';
 
 import './sass/main.sass';
+import { loadHubSpot } from './components/HubSpot/HubSpot';
 
 viewportUnitsBuggyfill.init({ force: true, refreshDebounceWait: 250 });
+
+// HubSpot script loader
+loadHubSpot();
 
 ReactDOM.render(
   <React.StrictMode>
