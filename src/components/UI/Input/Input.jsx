@@ -36,7 +36,6 @@ const Input = ({
   const inputIcon = useMemo(() => {
     if (icon) {
       return <i className={cns('hb-ico', icon)} />;
-      // return <SvgIcon name={icon} className={cns('input_icon', iconPosition && `_pos${iconPosition}`)} />;
     }
 
     return null;

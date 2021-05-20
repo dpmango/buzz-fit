@@ -30,12 +30,12 @@ const Industry = observer(({ ...props }) => {
 
         <Slider className="industry-slider" {...slickSettings}>
           {content.slides.map((x) => {
-            const { id, href } = x;
+            const { id, content, image } = x;
 
             return (
               <div className="industry-slide" key={id}>
-                <div className="industry-wrap">{x.content}</div>
-                <img className="industry-logo" src={x.image} alt="" />
+                <div className="industry-wrap">{content}</div>
+                <img className="industry-logo" src={image} alt="" />
               </div>
             );
           })}
