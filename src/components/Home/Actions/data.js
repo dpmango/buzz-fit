@@ -5,23 +5,18 @@ export default {
   videos: [
     {
       id: 1,
-      href: 'https://youtube.com/',
+      video: '5e664d7956df6e253dd08048',
+      preview: 'https://i.vimeocdn.com/video/863218035_640x320.jpg?r=pad',
     },
     {
       id: 2,
-      href: 'https://youtube.com/',
+      video: '5d52ebaf56df6e253d71bacc',
+      preview: 'https://i.vimeocdn.com/video/539838360_640x360.jpg?r=pad',
     },
     {
       id: 3,
-      href: 'https://youtube.com/',
-    },
-    {
-      id: 4,
-      href: 'https://youtube.com/',
-    },
-    {
-      id: 5,
-      href: 'https://youtube.com/',
+      video: '5d52ebaf56df6e253d71baf2',
+      preview: 'https://i.vimeocdn.com/video/538805589_640x360.jpg?r=pad',
     },
   ],
 };

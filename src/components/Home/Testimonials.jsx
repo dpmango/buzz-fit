@@ -1,10 +1,12 @@
 import React, { useMemo } from 'react';
 import { observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import Slider from 'react-slick';
 import cns from 'classnames';
 
 import { createSlickConfig } from '@helpers';
+import { HashLinkScroll } from '@ui';
 import routes from '@config/routes';
 
 const Main = observer(({ ...props }) => {
@@ -39,13 +41,14 @@ const Main = observer(({ ...props }) => {
                 <Link to="/order" className="primary-btn primary-btn-purple">
                   Get your TV Box Now
                 </Link>
-                <Link to="#calculate" className="info-link">
+                <HashLinkScroll to="#calculate" className="info-link">
                   <i className="hb-ico play-ico" />
                   Calculate your savings
-                </Link>
+                </HashLinkScroll>
               </div>
             </div>
           </div>
+
           <div className="testimonials-col testimonials-col__2">
             <Slider className="testimonials-slider" {...slickSettings}>
               <div className="testimonials-slide">
@@ -88,15 +91,16 @@ const Main = observer(({ ...props }) => {
                 <span className="testimonials-position">American singer-songwriter</span>
               </div>
             </Slider>
+
             <div className="testimonials-mob">
               <div className="info-buttons">
                 <Link to="/order" className="primary-btn primary-btn-purple">
                   Get your TV Box Now
                 </Link>
-                <Link to="#calculate" className="info-link">
+                <HashLinkScroll to="#calculate" className="info-link">
                   <i className="hb-ico play-ico" />
                   Calculate your savings
-                </Link>
+                </HashLinkScroll>
               </div>
             </div>
           </div>

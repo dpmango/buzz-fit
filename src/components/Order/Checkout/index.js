@@ -1,2 +1,1 @@
-export { default as Payment } from './Payment';
-export { default as Checkout } from './Checkout';
+export { default } from './Checkout';

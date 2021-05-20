@@ -32,8 +32,8 @@ export const scrollToEnd = (duration, el) => {
   ScrollTo(endOfThePageTop, duration, el);
 };
 
-export const scrollToStart = (duration, el) => {
-  ScrollTo(0, duration, el);
+export const scrollToStart = (duration, el, to) => {
+  ScrollTo(to || 0, duration, el);
 };
 
 export const getTop = (elem) => {

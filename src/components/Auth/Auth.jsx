@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import cns from 'classnames';
 
 import { AuthStoreContext } from '@store/AuthStore';
-import { Button, Input } from '@ui';
+import { Input } from '@ui';
 import routes from '@config/routes';
 
 import { handleAuthRequestError } from './requestHandlers';
@@ -62,9 +62,9 @@ const Auth = () => {
 
         {error && <div className={styles.error}>{error}</div>}
 
-        <Button block className={cns(styles.btn, 'mt-2')} type="submit">
+        <button block className={cns(styles.btn, 'mt-2')} type="submit">
           Войти
-        </Button>
+        </button>
       </form>
     </div>
   );
