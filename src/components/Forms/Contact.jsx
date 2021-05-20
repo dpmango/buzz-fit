@@ -20,7 +20,7 @@ const ContactForm = observer(() => {
     setMessage('');
   }, [setName, setEmail, setMessage]);
 
-  const validate = useCallback(() => {
+  const validate = useMemo(() => {
     const nameVal = name.trim();
     const emailVal = email.trim();
     const messageVal = message.trim();
@@ -59,7 +59,7 @@ const ContactForm = observer(() => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    if (validate()) {
+    if (validate) {
       const messageCleared = message.replace(/(<([^>]+)>)/gi, '');
 
       await formsContext
