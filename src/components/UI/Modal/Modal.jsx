@@ -19,8 +19,8 @@ const sharedStyles = {
     maxHeight: 'calc(100% - 16px)',
   },
   overlay: {
-    zIndex: 99,
-    // background: 'rgba(0,0,0, 0.5)',
+    zIndex: 99999,
+    background: 'rgba(0,0,0, 0.5)',
   },
 };
 
@@ -70,14 +70,16 @@ const VariantClasses = {
 const Modifiers = {
   DEFAULT: 'default',
   FULL: 'fullheight',
+  VIDEO: 'video',
 };
 
 const ModifierClasses = {
   [Modifiers.DEFAULT]: null,
   [Modifiers.FULL]: styles._full,
+  [Modifiers.VIDEO]: styles._video,
 };
 
-const ModalComponent = observer(({ variant, modifier, name, title, closeText, handleBackClick, children }) => {
+const ModalComponent = observer(({ variant, modifier, name, title, closeText, children }) => {
   const uiContext = useContext(UiStoreContext);
 
   const afterOpenModal = () => {};
@@ -107,15 +109,10 @@ const ModalComponent = observer(({ variant, modifier, name, title, closeText, ha
         <div
           className={cns(styles.container, variant && VariantClasses[variant], modifier && ModifierClasses[modifier])}>
           <div className={styles.head}>
-            {handleBackClick && (
-              <div className={styles.head_back} onClick={handleBackClick}>
-                <SvgIcon name="arrow-left" />
-              </div>
-            )}
             <div className={styles.head_title}>{title}</div>
             <div className={styles.close} onClick={closeModal}>
               <span>{closeText}</span>
-              <SvgIcon name="close" />
+              <i className="hb-ico i-ico-big" />
             </div>
           </div>
 
@@ -132,7 +129,6 @@ ModalComponent.propTypes = {
   name: PropTypes.string.isRequired,
   title: PropTypes.string,
   closeText: PropTypes.string,
-  handleBackClick: PropTypes.func,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
 };
 
