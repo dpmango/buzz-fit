@@ -9,3 +9,4 @@ export {
 export { getEnv } from './Env';
 export { ScrollTo, scrollToEnd, scrollToStart, getTop } from './Scroll';
 export { createSlickConfig } from './SlickSettings';
+export { formatPrice, PricePad, getFloat, floatOnly } from './PriceFormat';

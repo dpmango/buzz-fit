@@ -2,10 +2,25 @@ import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import cns from 'classnames';
 
+import { formatPrice } from '@helpers';
 import { Select } from '@ui';
 
-const Sidebar = ({ ...props }) => {
-  const titleSelectOptions = [{ value: 1, label: 'Qty: 1' }];
+const Sidebar = ({ quantity, setQuantity, ...props }) => {
+  const [, ...qts] = Array(10 + 1).keys();
+
+  const selectOptions = qts.map((x) => ({ value: x, label: `Qty: ${x}` }));
+  const pricePerItem = 199.0;
+
+  const getPrice = useMemo(() => {
+    const subtotal = quantity.value * pricePerItem;
+    const delivery = 0;
+
+    return {
+      subtotal: formatPrice(subtotal),
+      delivery: delivery > 0 ? formatPrice(delivery) : 'Included',
+      total: formatPrice(subtotal + delivery),
+    };
+  }, [quantity]);
 
   return (
     <div className="checkout-sidebar">
@@ -17,34 +32,34 @@ const Sidebar = ({ ...props }) => {
         <div className="checkout-main__info">
           <span className="checkout-main__title">Buzz Fit Box Service</span>
           <p>Refundable deposit</p>
-          <p>$199.00 USD</p>
+          <p>${formatPrice(pricePerItem)} USD</p>
           <div className="checkout-main__row">
             <Select
-              placeholder="Qty: 1"
-              options={titleSelectOptions}
-              value={quantiry}
+              variant="small"
+              placeholder="Qty"
+              options={selectOptions}
+              value={quantity}
               onChange={(e) => setQuantity(e)}
             />
 
-            <a href="#" className="primary-btn primary-btn-yellow">
+            {/* <a href="#" className="primary-btn primary-btn-yellow">
               update
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
       <ul>
         <li>
-          <span>Subtotal</span>
-          $199.00 USD
+          <span>Subtotal</span>${getPrice.subtotal} USD
         </li>
         <li>
           <span>Shipping</span>
-          Included
+          {getPrice.delivery}
         </li>
       </ul>
       <div className="checkout-total">
         <span>Total</span>
-        <b>$199.00 USD</b>
+        <b>${getPrice.total} USD</b>
       </div>
       <div className="checkout-logos">
         <div className="checkout-logo">
@@ -56,6 +71,11 @@ const Sidebar = ({ ...props }) => {
       </div>
     </div>
   );
+};
+
+Sidebar.propTypes = {
+  quantity: PropTypes.shape({ value: PropTypes.number, label: PropTypes.string }),
+  setQuantity: PropTypes.function,
 };
 
 export default Sidebar;

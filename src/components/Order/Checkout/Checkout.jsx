@@ -11,7 +11,7 @@ const Checkout = ({ ...props }) => {
   const [step, setStep] = useState(1);
   const [email, setEmail] = useState('');
   const [emailRepeat, setEmailRepeat] = useState('');
-  const [title, setTitle] = useState({ value: null, label: null });
+  const [title, setTitle] = useState(null);
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [npiNumber, setNpiNumber] = useState('');
@@ -19,8 +19,8 @@ const Checkout = ({ ...props }) => {
   const [businessName, setBusinessName] = useState('');
   const [shippingAddress, setShippingAddress] = useState('');
   const [shippingCity, setShippingCity] = useState('');
-  const [shippingState, setShippingState] = useState({ value: null, label: null });
-  const [shippingZip, setShippingZip] = useState({ value: null, label: null });
+  const [shippingState, setShippingState] = useState(null);
+  const [shippingZip, setShippingZip] = useState(null);
 
   const [cardName, setCardName] = useState('');
   const [cardNumber, setCardNumber] = useState('');
@@ -29,8 +29,10 @@ const Checkout = ({ ...props }) => {
   const [billingIsShipping, setBillingIsShipping] = useState(false); // TODO checkbox
   const [billingAddress, setBillingAddress] = useState('');
   const [billingCity, setBillingCity] = useState('');
-  const [billingState, setBillingState] = useState({ value: null, label: null });
-  const [billingZip, setBillingZip] = useState({ value: null, label: null });
+  const [billingState, setBillingState] = useState(null);
+  const [billingZip, setBillingZip] = useState(null);
+
+  const [quantity, setQuantity] = useState({ value: 1, label: 'Qty: 1' });
 
   const titleSelectOptions = [
     { value: 'mr', label: 'Mr.' },
@@ -325,7 +327,7 @@ const Checkout = ({ ...props }) => {
             )}
           </div>
 
-          <CheckoutSidebar />
+          <CheckoutSidebar quantity={quantity} setQuantity={(e) => setQuantity(e)} />
         </div>
       </div>
     </section>
