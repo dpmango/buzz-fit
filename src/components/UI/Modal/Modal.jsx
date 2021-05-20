@@ -8,6 +8,7 @@ import { UiStoreContext } from '@store/UiStore';
 import { SvgIcon } from '@ui';
 
 import styles from './Modal.module.scss';
+import globalStyles from './Modal.scss';
 
 const sharedStyles = {
   content: {
