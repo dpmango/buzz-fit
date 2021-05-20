@@ -39,9 +39,6 @@
       transform: translate(-50%, -50%);
       font-size: 12px;
     }
-    &:hover {
-      color: red;
-    }
   }
   &_title {
     font-weight: 500;
@@ -57,20 +54,21 @@
   padding: 10px;
   font-size: 0;
   cursor: pointer;
-  color: red;
   transition: color 0.25s ease-in-out;
   span {
     display: inline-block;
     margin-right: 8px;
-    font-size: 16px;
-    line-height: 125%;
+    font-size: 2rem;
+    line-height: 1;
+    transition: opacity 0.3s;
+    &:hover {
+     opacity: 0.8;
+    }
   }
   svg {
     font-size: 10px;
   }
-  &:hover {
-    color: black;
-  }
+
 }
 
 .content {

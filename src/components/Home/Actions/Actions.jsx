@@ -81,8 +81,7 @@ const Actions = observer(({ ...props }) => {
             return (
               <div className="actions-slide" key={id}>
                 <div className="actions-video" onClick={() => handleVideoClick(video)}>
-                  <img className="actions-video-placeholder" src={preview} />
-
+                  <img className="actions-video-placeholder" src={preview} alt="" />
                   <i className="hb-ico play-ico-big" />
                 </div>
               </div>
@@ -91,7 +90,7 @@ const Actions = observer(({ ...props }) => {
         </Slider>
 
         <Modal name="actions-video" modifier="video">
-          <div id="video-container"></div>
+          <div id="video-container" />
         </Modal>
 
         <div className="actions-bottom">

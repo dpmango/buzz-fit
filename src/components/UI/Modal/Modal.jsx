@@ -111,8 +111,7 @@ const ModalComponent = observer(({ variant, modifier, name, title, closeText, ch
           <div className={styles.head}>
             <div className={styles.head_title}>{title}</div>
             <div className={styles.close} onClick={closeModal}>
-              <span>{closeText}</span>
-              <i className="hb-ico i-ico-big" />
+              <span>&times;</span>
             </div>
           </div>
 
