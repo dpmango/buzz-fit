@@ -52,17 +52,17 @@ const Calculate = observer(({ ...props }) => {
     }
 
     if (!validPerWeek) {
-      setErrors({ perWeek: 'Plese type integer' });
+      setErrors({ perWeek: 'Please type integer' });
       return false;
     }
 
     if (!validPerYear) {
-      setErrors({ perYear: 'Plese type integer' });
+      setErrors({ perYear: 'Please type integer' });
       return false;
     }
 
     if (!validEmail) {
-      setErrors({ email: 'Plese type valid e-mail' });
+      setErrors({ email: 'Please type valid email' });
       return false;
     }
 
@@ -114,7 +114,7 @@ const Calculate = observer(({ ...props }) => {
           <Input
             value={perWeek}
             placeholder="Patients per week"
-            type="number"
+            type="text"
             onChange={(v) => setPerWeek(v)}
             error={errors.perWeek}
           />
@@ -123,7 +123,7 @@ const Calculate = observer(({ ...props }) => {
           <Input
             value={perYear}
             placeholder="Weeks per year"
-            type="number"
+            type="text"
             onChange={(v) => setPerYear(v)}
             error={errors.perYear}
           />
@@ -132,13 +132,13 @@ const Calculate = observer(({ ...props }) => {
       <Input
         value={email}
         placeholder="Your email address"
-        type="email"
+        type="text"
         onChange={(v) => setEmail(v)}
         error={errors.email}
       />
 
       <button type="submit" className="primary-btn">
-        calculate
+        Calculate
       </button>
     </form>
   );
