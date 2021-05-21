@@ -39,7 +39,7 @@ const Testimonials = observer(({ ...props }) => {
                 <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-purple">
                   Get your TV Box Now
                 </Link>
-                <HashLinkScroll to="#calculate" className="info-link">
+                <HashLinkScroll to="/#calculate" className="info-link">
                   <i className="hb-ico play-ico" />
                   Calculate your savings
                 </HashLinkScroll>
@@ -69,7 +69,7 @@ const Testimonials = observer(({ ...props }) => {
                 <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-purple">
                   Get your TV Box Now
                 </Link>
-                <HashLinkScroll to="#calculate" className="info-link">
+                <HashLinkScroll to="/#calculate" className="info-link">
                   <i className="hb-ico play-ico" />
                   Calculate your savings
                 </HashLinkScroll>

@@ -3,6 +3,7 @@ export const ScrollTo = (to, duration = 800, el) => {
   const start = element.scrollTop;
   const change = to - start;
   const startDate = +new Date();
+
   const easeInOutQuad = (t, b, c, d) => {
     t /= d / 2;
     if (t < 1) {

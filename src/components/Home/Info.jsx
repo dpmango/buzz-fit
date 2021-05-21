@@ -141,7 +141,7 @@ const Info = observer(({ ...props }) => {
                 <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-purple">
                   Get your TV Box Now
                 </Link>
-                <HashLinkScroll to="#cost" className="info-link">
+                <HashLinkScroll to="/#cost" className="info-link">
                   <i className="hb-ico play-ico" />
                   Cost of getting it wrong
                 </HashLinkScroll>
@@ -172,7 +172,7 @@ const Info = observer(({ ...props }) => {
                 <Link to={routes.ORDER.ROOT} className="primary-btn primary-btn-yellow">
                   Get your TV Box Now
                 </Link>
-                <HashLinkScroll smooth to="#compare" className="info-link">
+                <HashLinkScroll to="/#compare" className="info-link">
                   <i className="hb-ico play-ico-yellow" />
                   See how we compare
                 </HashLinkScroll>

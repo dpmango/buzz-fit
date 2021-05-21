@@ -18,7 +18,7 @@ const SignupForm = () => {
     setEmail('');
   }, [setFirstname, setLastName, setEmail]);
 
-  const validate = useMemo(() => {
+  const validate = useCallback(() => {
     const firstNameVal = firstname.trim();
     const lastNameVal = lastname.trim();
     const emailVal = email.trim();
@@ -51,7 +51,7 @@ const SignupForm = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    if (validate) {
+    if (validate()) {
       await HubSpot.saveHubSpotContact({ firstname, lastname, email }).then((res) => {
         resetForm();
         UiContext.setModal('signup-success');

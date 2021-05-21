@@ -7,16 +7,20 @@ import { ScrollTo } from '@helpers';
 
 const HashLinkScroll = ({ to, className, children, ...props }) => {
   const handleScroll = (el) => {
-    // document.querySelector('#compare').offsetTop
-    // const element = document.querySelector(`#${el.id}`);
-
-    console.log(el, el.offsetTop);
-
     ScrollTo(el.offsetTop, 600);
   };
 
+  // const handleClick = (e) => {
+  //   // e.preventDefault();
+
+  //   const selector = e.target.getAttribute('href').substring(1);
+  //   const el = document.querySelector(`${selector}`);
+
+  //   ScrollTo(el.offsetTop, 600);
+  // };
+
   return (
-    <HashLink to={to} className={className} scroll={handleScroll}>
+    <HashLink to={to} className={className} scroll={handleScroll} {...props}>
       {children}
     </HashLink>
   );

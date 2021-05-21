@@ -66,7 +66,7 @@ const Pricing = observer(({ ...props }) => {
 
           {mobileTabs}
 
-          <HashLinkScroll to="#calculate" className="pricing-mob__link">
+          <HashLinkScroll to="/#calculate" className="pricing-mob__link">
             Calculate your potential savings
           </HashLinkScroll>
         </div>

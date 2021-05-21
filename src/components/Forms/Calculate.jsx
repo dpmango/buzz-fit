@@ -34,7 +34,7 @@ const Calculate = observer(({ ...props }) => {
     setEmail('');
   }, [setSpeciality, setPerWeek, setPerYear, setEmail]);
 
-  const validate = useMemo(() => {
+  const validate = useCallback(() => {
     const specialityCode = speciality && speciality.value;
     const perWeekVal = perWeek.trim();
     const perYearVal = perYear.trim();
@@ -73,7 +73,7 @@ const Calculate = observer(({ ...props }) => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    if (validate) {
+    if (validate()) {
       const postObj = {
         ppw: parseInt(perWeek),
         wpy: parseInt(perYear),
