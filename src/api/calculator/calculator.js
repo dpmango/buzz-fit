@@ -13,7 +13,7 @@ export default {
     formData.append('code', request.code);
     formData.append('email', request.email);
 
-    api.post(endpoints.calculator.report, formData);
+    return api.post(endpoints.calculator.report, formData);
   },
   // @param
   reportById: (request) => api.get(endpoints.calculator.reportById.replace(':id', request.id)),
