@@ -131,9 +131,11 @@
     z-index: 2
 
 .checkbox
-  padding: 0 0 0 34px
+  // padding: 0 0 0 34px
 
   &-ico
+    position: relative
+    flex: 0 0 auto
     border: 1px solid #DCE1EA
     width: 22px
     height: 22px
@@ -143,8 +145,22 @@
       display: block
       transition: $transition
       opacity: 0
+    &::after
+      display: inline-block
+      content: ' '
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      width: 8px
+      height: 8px
+      background: green
+      border-radius: 6px
+      opacity: 0
+      transition: $transition
 
   p
+    margin-left: 12px
     font-size: 0.75rem
     line-height: 1.1rem
     color: rgba(#515151, 0.75)
@@ -153,6 +169,22 @@
     &:checked
       & + .checkbox-ico
         svg
+          opacity: 1
+        &::after
+          opacity: 1
+      & + .checkbox-wrapper .checkbox-ico
+        svg
+          opacity: 1
+        &::after
+          opacity: 1
+  .checkbox-wrapper
+    display: inline-flex
+    align-items: center
+    &._isChecked
+      .checkbox-ico
+        svg
+          opacity: 1
+        &::after
           opacity: 1
 
 .radio
