@@ -69,7 +69,7 @@ const SignupForm = () => {
           <div className="notMiss-form__col">
             <Input
               value={firstname}
-              placeholder="First Name"
+              placeholder="First name"
               type="text"
               onChange={(v) => setFirstname(v)}
               error={errors.firstname}
@@ -78,7 +78,7 @@ const SignupForm = () => {
           <div className="notMiss-form__col">
             <Input
               value={lastname}
-              placeholder="Last Name"
+              placeholder="Last name"
               type="text"
               onChange={(v) => setLastName(v)}
               error={errors.lastname}
@@ -87,7 +87,7 @@ const SignupForm = () => {
           <div className="notMiss-form__col">
             <Input
               value={email}
-              placeholder="Your Email Address"
+              placeholder="Your email address"
               type="email"
               onChange={(v) => setEmail(v)}
               error={errors.email}

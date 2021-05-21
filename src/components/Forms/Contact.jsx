@@ -38,7 +38,7 @@ const ContactForm = observer(() => {
     }
 
     if (!validEmail) {
-      setErrors({ email: 'Plese type valid e-mail' });
+      setErrors({ email: 'Please type valid e-mail' });
       return false;
     }
 
@@ -84,12 +84,12 @@ const ContactForm = observer(() => {
       <form onSubmit={handleFormSubmit}>
         <div className="input-row">
           <div className="input-col">
-            <Input value={name} placeholder="Full Name" type="text" onChange={(v) => setName(v)} error={errors.name} />
+            <Input value={name} placeholder="Full name" type="text" onChange={(v) => setName(v)} error={errors.name} />
           </div>
           <div className="input-col">
             <Input
               value={email}
-              placeholder="Email Address"
+              placeholder="Your email address"
               type="email"
               onChange={(v) => setEmail(v)}
               error={errors.email}
@@ -99,7 +99,7 @@ const ContactForm = observer(() => {
         <Input
           value={message}
           type="textarea"
-          placeholder="Your Message"
+          placeholder="Your message"
           onChange={(v) => setMessage(v)}
           error={errors.message}
         />
