@@ -6,18 +6,15 @@ export default {
   // @param Integer wpy (*)
   // @param String code (*)
   // @param String email (*) */
-  report: (request) =>
-    api.post(
-      endpoints.calculator.report,
-      {
-        ...request,
-      },
-      {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      }
-    ),
+  report: (request) => {
+    const formData = new FormData();
+    formData.append('ppw', request.ppw);
+    formData.append('wpy', request.wpy);
+    formData.append('code', request.code);
+    formData.append('email', request.email);
+
+    return api.post(endpoints.calculator.report, formData);
+  },
   // @param
   reportById: (request) => api.get(endpoints.calculator.reportById.replace(':id', request.id)),
 };

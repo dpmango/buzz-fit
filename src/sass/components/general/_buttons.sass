@@ -16,8 +16,10 @@
   border: 1px solid #fff
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15)
   border-radius: 59px
+  transition: $transition !important
 
   &:hover
+    opacity: 1 !important
     background: lighten(#61B2AA, 5%)
 
   &-yellow
@@ -28,11 +30,11 @@
       background: lighten(#FFC565, 5%)
 
   &-peach
-    background: #FFB3B4
+    background: darken(#FFB3B4, 3%)
     color: #292930
 
     &:hover
-      background: lighten(#FFB3B4, 5%)
+      background: lighten(#FFB3B4, 2%)
 
   &-purple
     background: #978FDC
