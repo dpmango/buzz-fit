@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import cns from 'classnames';
 
 import routes from '@config/routes';
+import { HashLinkScroll } from '@ui';
 
 const Result = observer(({ ...props }) => {
   return (
@@ -14,7 +15,7 @@ const Result = observer(({ ...props }) => {
           <h2 className="section-title">The cost of getting it wrong</h2>
           <p>
             You invest serious time and money getting your healthcare consumers in the door. Every interaction with
-            customers in your practice is an opportunity to up-sell*.
+            customers in your practice is an opportunity to upsell*.
           </p>
         </div>
         <div className="result-img">
@@ -51,7 +52,8 @@ const Result = observer(({ ...props }) => {
           </Link>
         </div>
         <div className="result-bottom">
-          *Access the supporting research by <Link to="/#calculate"> calculating your savings now</Link>
+          *Access the supporting research by{' '}
+          <HashLinkScroll to="/#calculate">calculating your savings now</HashLinkScroll>
           <i className="hb-ico play-ico-yellow" />
         </div>
       </div>
