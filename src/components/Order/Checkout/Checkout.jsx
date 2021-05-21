@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import cns from 'classnames';
 
 import { scrollToStart } from '@helpers';
-import { Select, Input } from '@ui';
+import { Select, Input, Checkbox } from '@ui';
 
 import CheckoutSteps from './Steps';
 import CheckoutSidebar from './Sidebar';
@@ -26,7 +26,7 @@ const Checkout = ({ ...props }) => {
   const [cardNumber, setCardNumber] = useState('');
   const [cardExp, setCardExp] = useState('');
   const [cardCvc, setCardCvc] = useState('');
-  const [billingIsShipping, setBillingIsShipping] = useState(false); // TODO checkbox
+  const [billingIsShipping, setBillingIsShipping] = useState(false);
   const [billingAddress, setBillingAddress] = useState('');
   const [billingCity, setBillingCity] = useState('');
   const [billingState, setBillingState] = useState(null);
@@ -218,7 +218,7 @@ const Checkout = ({ ...props }) => {
                         type="text"
                         onChange={(v) => setCardName(v)}
                         name="ccname"
-                        autocomplete="cc-name"
+                        autoComplete="cc-name"
                         required
                       />
                     </div>
@@ -232,7 +232,7 @@ const Checkout = ({ ...props }) => {
                         inputMode="numeric"
                         pattern="[0-9\s]{13,19}"
                         name="cardnumber"
-                        autocomplete="cc-number"
+                        autoComplete="cc-number"
                         required
                       />
                     </div>
@@ -244,7 +244,7 @@ const Checkout = ({ ...props }) => {
                         type="text"
                         onChange={(v) => setCardExp(v)}
                         name="cc-exp"
-                        autocomplete="cc-exp"
+                        autoComplete="cc-exp"
                         required
                       />
                     </div>
@@ -256,16 +256,17 @@ const Checkout = ({ ...props }) => {
                         type="text"
                         onChange={(v) => setCardCvc(v)}
                         name="cc-cvc"
-                        autocomplete="cc-cvc"
+                        autoComplete="cc-cvc"
                         required
                       />
                     </div>
                   </div>
-                  <div className="checkbox">
-                    <input type="checkbox" />
-                    <i className="checkbox-ico"></i>
-                    <p>Billing address is different to the shipping address</p>
-                  </div>
+                  <Checkbox
+                    isChecked={billingIsShipping}
+                    onChange={() => setBillingIsShipping(!billingIsShipping)}
+                    label="Billing address is different to the shipping address"
+                  />
+
                   <div className="checkout-bottom">
                     <a href="#" onClick={() => setStep(1)} className="checkout-back">
                       Back
@@ -277,52 +278,54 @@ const Checkout = ({ ...props }) => {
                     </div>
                   </div>
                 </div>
-                <div className="checkout-block">
-                  <div className="checkout-row">
-                    <div className="checkout-col checkout-col__100">
-                      <Input
-                        value={billingAddress}
-                        label="Billing Address"
-                        placeholder="Billing address"
-                        type="text"
-                        icon="locate-ico"
-                        onChange={(v) => setBillingAddress(v)}
-                      />
+                {!billingIsShipping && (
+                  <div className="checkout-block">
+                    <div className="checkout-row">
+                      <div className="checkout-col checkout-col__100">
+                        <Input
+                          value={billingAddress}
+                          label="Billing Address"
+                          placeholder="Billing address"
+                          type="text"
+                          icon="locate-ico"
+                          onChange={(v) => setBillingAddress(v)}
+                        />
+                      </div>
+                      <div className="checkout-col">
+                        <Input
+                          value={billingCity}
+                          label="Billing City"
+                          placeholder="City"
+                          type="text"
+                          onChange={(v) => setBillingCity(v)}
+                        />
+                      </div>
+                      <div className="checkout-col checkout-col__25">
+                        <Select
+                          label="Billing state"
+                          placeholder="State/Province"
+                          options={titleSelectOptions}
+                          value={billingState}
+                          onChange={(e) => setBillingState(e)}
+                        />
+                      </div>
+                      <div className="checkout-col checkout-col__25">
+                        <Select
+                          label="Billing Zip"
+                          placeholder="ZIP"
+                          options={titleSelectOptions}
+                          value={billingZip}
+                          onChange={(e) => setBillingZip(e)}
+                        />
+                      </div>
                     </div>
-                    <div className="checkout-col">
-                      <Input
-                        value={billingCity}
-                        label="Billing City"
-                        placeholder="City"
-                        type="text"
-                        onChange={(v) => setBillingCity(v)}
-                      />
-                    </div>
-                    <div className="checkout-col checkout-col__25">
-                      <Select
-                        label="Billing state"
-                        placeholder="State/Province"
-                        options={titleSelectOptions}
-                        value={billingState}
-                        onChange={(e) => setBillingState(e)}
-                      />
-                    </div>
-                    <div className="checkout-col checkout-col__25">
-                      <Select
-                        label="Billing Zip"
-                        placeholder="ZIP"
-                        options={titleSelectOptions}
-                        value={billingZip}
-                        onChange={(e) => setBillingZip(e)}
-                      />
+                    <div className="checkout-button">
+                      <button type="submit" className="primary-btn">
+                        Pay now
+                      </button>
                     </div>
                   </div>
-                  <div className="checkout-button">
-                    <button type="submit" className="primary-btn">
-                      Pay now
-                    </button>
-                  </div>
-                </div>
+                )}
               </form>
             )}
           </div>
