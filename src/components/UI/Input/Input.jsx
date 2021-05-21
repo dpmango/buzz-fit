@@ -97,7 +97,7 @@ const Input = ({
 
         {clearIcon}
 
-        {error && <div className={'error'}>{error}</div>}
+        {/* {error && <div className={'error'}>{error}</div>} */}
       </div>
     </div>
   );

@@ -46,7 +46,7 @@ const SelectComponent = ({ label, value, className, options, error, onChange, va
           {...props}
         />
 
-        {error && <div className={'error'}>{error}</div>}
+        {/* {error && <div className={'error'}>{error}</div>} */}
       </div>
     </div>
   );
